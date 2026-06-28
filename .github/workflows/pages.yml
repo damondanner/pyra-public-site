@@ -1,18 +1,36 @@
-name: Test PYRA public website
+name: Deploy PYRA public website
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
+    paths:
+      - "apps/web/public/**"
+      - "apps/api/src/coingecko.js"
+      - "packages/pricing/src/**"
+      - "scripts/generate-public-barter-credit.js"
+      - "scripts/update-public-barter-credit-history.js"
+      - ".github/workflows/pages.yml"
+  schedule:
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pyra-pages
+  cancel-in-progress: true
 
 jobs:
-  test:
-    name: Test public website package
+  deploy:
+    name: Deploy static public website
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -22,5 +40,27 @@ jobs:
         with:
           node-version: 22
 
-      - name: Run tests
-        run: npm test
+      - name: Generate barter-credit snapshot
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          COINGECKO_API_TIER: ${{ secrets.COINGECKO_API_TIER }}
+          PYRA_PUBLIC_MARKET_PAGES: "4"
+          PYRA_PUBLIC_MARKET_PAGE_SIZE: "250"
+        run: node scripts/generate-public-barter-credit.js apps/web/public/api/barter-credit.json apps/web/public/assets/barter-credit.json
+
+      - name: Update daily barter-credit history
+        env:
+          PYRA_PUBLIC_HISTORY_URL: https://pyraprotocol.com/api/barter-credit-history.json
+        run: node scripts/update-public-barter-credit-history.js apps/web/public/api/barter-credit.json apps/web/public/api/barter-credit-history.json
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload public site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: apps/web/public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
