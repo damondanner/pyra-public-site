@@ -15,6 +15,7 @@ const supplyReservePolicy = fs.readFileSync(path.join(repoRoot, 'docs/supply-res
 for (const [label, html] of pages) {
   for (const expected of [
     'PYRA Protocol',
+    '<link rel="icon" href="assets/pyra-logo.jpg" type="image/jpeg">',
     'assets/pyra-logo.jpg',
     'base:app_id',
     '6a246aeaab28df7fd2fc178e',
@@ -138,6 +139,7 @@ const legalPages = [
 for (const [label, html] of legalPages) {
   for (const expected of [
     'PYRA Protocol',
+    '<link rel="icon" href="assets/pyra-logo.jpg" type="image/jpeg">',
     'assets/pyra-logo.jpg',
     'legal.css'
   ]) {
