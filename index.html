@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="base:app_id" content="6a246aeaab28df7fd2fc178e">
+    <meta name="description" content="PYRA Protocol is a USA-only closed barter network wallet and distributed-ledger barter credit system for approved members.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#070604">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PYRA Protocol">
+    <meta property="og:description" content="A USA-only closed barter network wallet built on crypto rails for approved PYRA members.">
+    <meta property="og:image" content="assets/pyra-logo.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PYRA Protocol">
+    <meta name="twitter:description" content="A USA-only closed barter network wallet built on crypto rails for approved PYRA members.">
+    <meta name="twitter:image" content="assets/pyra-logo.jpg">
+    <title>PYRA Protocol</title>
+    <style>
+      :root {
+        --obsidian: #070604;
+        --black: #11100d;
+        --charcoal: #1d1a14;
+        --gold: #d6a84a;
+        --bright-gold: #f5d77b;
+        --sand: #e8d6a3;
+        --papyrus: #f7efd7;
+        --muted: #b9aa84;
+        --line: rgba(245, 215, 123, 0.28);
+        --green: #0f6f5e;
+        --mint: #65d2b4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--obsidian);
+        color: var(--papyrus);
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 0;
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        content: "";
+        background:
+          linear-gradient(90deg, rgba(214, 168, 74, 0.08) 1px, transparent 1px) 0 0 / 44px 44px,
+          linear-gradient(rgba(214, 168, 74, 0.06) 1px, transparent 1px) 0 0 / 44px 44px,
+          radial-gradient(circle at 72% 18%, rgba(245, 215, 123, 0.18), transparent 34%),
+          linear-gradient(135deg, #070604 0%, #17130c 58%, #050403 100%);
+      }
+
+      body::after {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: "";
+        background:
+          linear-gradient(115deg, transparent 0 48%, rgba(245, 215, 123, 0.12) 48% 50%, transparent 50% 100%),
+          linear-gradient(245deg, transparent 0 50%, rgba(214, 168, 74, 0.08) 50% 52%, transparent 52% 100%);
+      }
+
+      .wrap {
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 6, 4, 0.82);
+      }
+
+      .topbar {
+        display: flex;
+        min-height: 82px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-weight: 900;
+      }
+
+      .brand img {
+        width: 52px;
+        height: 52px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+      }
+
+      .brand span {
+        font-size: 20px;
+      }
+
+      .status {
+        border: 1px solid var(--gold);
+        color: var(--bright-gold);
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      main {
+        padding: 42px 0 64px;
+      }
+
+      .hero {
+        display: grid;
+        min-height: calc(100vh - 146px);
+        grid-template-columns: minmax(0, 1fr) 380px;
+        gap: 34px;
+        align-items: center;
+      }
+
+      .hero-copy {
+        padding: 28px 0;
+      }
+
+      .eyebrow {
+        color: var(--bright-gold);
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 850px;
+        margin-top: 14px;
+        color: #fff7df;
+        font-size: clamp(48px, 7vw, 88px);
+        line-height: 1.02;
+      }
+
+      .lead {
+        max-width: 760px;
+        margin-top: 22px;
+        color: #d8c797;
+        font-size: 21px;
+        line-height: 1.55;
+      }
+
+      .coming {
+        display: inline-block;
+        margin-top: 30px;
+        border: 1px solid var(--gold);
+        background: rgba(214, 168, 74, 0.08);
+        color: var(--bright-gold);
+        padding: 14px 18px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .credit-panel {
+        display: grid;
+        max-width: 760px;
+        margin-top: 22px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px;
+        align-items: end;
+        border: 1px solid var(--line);
+        background: rgba(17, 16, 13, 0.78);
+        padding: 18px;
+      }
+
+      .credit-kicker {
+        color: var(--gold);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .credit-value {
+        margin-top: 8px;
+        color: #fff7df;
+        font-size: clamp(28px, 5vw, 46px);
+        font-weight: 900;
+        overflow-wrap: anywhere;
+      }
+
+      .credit-meta {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .credit-badge {
+        border: 1px solid var(--gold);
+        color: var(--bright-gold);
+        padding: 10px 12px;
+        font-size: 12px;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .risk-notice {
+        max-width: 760px;
+        margin-top: 18px;
+        border: 1px solid rgba(245, 215, 123, 0.34);
+        background: rgba(7, 6, 4, 0.72);
+        color: #d8c797;
+        padding: 16px 18px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .risk-notice strong {
+        color: var(--bright-gold);
+      }
+
+      .seal {
+        position: relative;
+        display: grid;
+        min-height: 460px;
+        place-items: center;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(247, 239, 215, 0.05), rgba(214, 168, 74, 0.08));
+      }
+
+      .seal::before,
+      .seal::after {
+        position: absolute;
+        content: "";
+        border: 1px solid rgba(245, 215, 123, 0.22);
+      }
+
+      .seal::before {
+        inset: 20px;
+      }
+
+      .seal::after {
+        inset: 42px;
+      }
+
+      .seal img {
+        position: relative;
+        z-index: 1;
+        width: min(280px, 68vw);
+        height: auto;
+        border-radius: 50%;
+      }
+
+      .bands {
+        display: grid;
+        gap: 18px;
+      }
+
+      section {
+        border-top: 1px solid var(--line);
+        padding: 34px 0;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+
+      h2 {
+        color: #fff7df;
+        font-size: 34px;
+      }
+
+      .note {
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .card {
+        min-height: 180px;
+        border: 1px solid var(--line);
+        background: rgba(17, 16, 13, 0.86);
+        padding: 20px;
+      }
+
+      .label {
+        color: var(--gold);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .value {
+        margin-top: 10px;
+        color: #fff7df;
+        font-size: 28px;
+        font-weight: 900;
+        overflow-wrap: anywhere;
+      }
+
+      .card p {
+        margin-top: 12px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .feature-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .feature {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 12px;
+        align-items: start;
+        border: 1px solid var(--line);
+        background: rgba(7, 6, 4, 0.72);
+        padding: 18px;
+      }
+
+      .glyph {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border: 1px solid var(--gold);
+        color: var(--bright-gold);
+        font-weight: 900;
+      }
+
+      .feature h3 {
+        color: #fff7df;
+        font-size: 18px;
+      }
+
+      .feature p {
+        margin-top: 7px;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      .history-shell {
+        border: 1px solid var(--line);
+        background: rgba(17, 16, 13, 0.86);
+        padding: 20px;
+      }
+
+      .history-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .history-stat {
+        border-left: 2px solid var(--gold);
+        padding-left: 12px;
+      }
+
+      .history-stat strong {
+        display: block;
+        margin-top: 7px;
+        color: #fff7df;
+        font-size: 22px;
+      }
+
+      .history-chart {
+        display: block;
+        width: 100%;
+        aspect-ratio: 19 / 7;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 6, 4, 0.52);
+      }
+
+      .history-grid-line {
+        stroke: rgba(245, 215, 123, 0.16);
+        stroke-width: 1;
+      }
+
+      .history-axis-label {
+        fill: var(--muted);
+        font-size: 11px;
+      }
+
+      .history-line {
+        fill: none;
+        stroke-width: 2.5;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .history-line-reconstructed {
+        stroke: var(--bright-gold);
+        stroke-dasharray: 7 5;
+      }
+
+      .history-line-observed {
+        stroke: var(--mint);
+      }
+
+      .history-point {
+        stroke-width: 1.5;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .history-point-reconstructed {
+        fill: var(--black);
+        stroke: var(--bright-gold);
+      }
+
+      .history-point-observed {
+        fill: var(--mint);
+        stroke: #eafff9;
+      }
+
+      .history-point:focus {
+        outline: none;
+        stroke: #ffffff;
+        stroke-width: 3;
+      }
+
+      .history-foot {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .history-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .history-legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .history-swatch {
+        display: inline-block;
+        width: 28px;
+        border-top: 2px solid var(--mint);
+      }
+
+      .history-swatch.reconstructed {
+        border-top-color: var(--bright-gold);
+        border-top-style: dashed;
+      }
+
+      .history-foot a {
+        color: var(--bright-gold);
+        font-weight: 900;
+      }
+
+      .history-caveat {
+        flex-basis: 100%;
+        color: var(--muted);
+      }
+
+      .tally {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .tally-panel {
+        border: 1px solid var(--line);
+        background: rgba(17, 16, 13, 0.86);
+        padding: 20px;
+      }
+
+      .tally-counts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .tally-stat {
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+      }
+
+      .tally-stat strong {
+        display: block;
+        color: #fff7df;
+        font-size: 30px;
+      }
+
+      .tally-stat span {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .tally-source {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 22px 0 30px;
+        color: var(--muted);
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .legal-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .legal-links a {
+        color: var(--bright-gold);
+        font-size: 13px;
+        font-weight: 900;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .legal-links a:focus,
+      .legal-links a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 860px) {
+        .topbar,
+        .section-head {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .hero,
+        .grid,
+        .feature-list,
+        .tally,
+        .tally-counts,
+        .history-stats {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        .seal {
+          min-height: 360px;
+        }
+
+        .history-chart {
+          aspect-ratio: 4 / 3;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap topbar">
+        <div class="brand">
+          <img src="assets/pyra-logo.jpg" alt="PYRA logo">
+          <span>PYRA Protocol</span>
+        </div>
+        <div class="status">Coming Soon</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Pyramidion Cryptocurrency LLC</div>
+          <h1>A closed barter network wallet built on crypto rails.</h1>
+            <p class="lead">PYRA is a USA-only distributed-ledger barter credit system for approved members, designed for trade activity, account approval, activity records, and multichain transparency.</p>
+          <div class="credit-panel" aria-live="polite">
+            <div>
+              <div class="credit-kicker">PYRA Barter Credit</div>
+              <div class="credit-value" id="barterCreditValue">Loading btc...</div>
+              <div class="credit-meta" id="barterCreditMeta">Loading the published CoinGecko market snapshot. Refreshes every 5 minutes.</div>
+            </div>
+            <div class="credit-badge">btc reference</div>
+          </div>
+          <div class="risk-notice">
+            <strong>Important notice:</strong> Pyramidion Cryptocurrency LLC is not a bank, is not an FDIC-insured institution, and PYRA is not FDIC insured. PYRA is not a deposit account, legal tender, investment product, securities offering, or cash redemption product. Member access is USA-only and subject to KYC, sanctions screening, wallet registration, and manual approval.
+          </div>
+          <div class="coming">Website and member app coming soon</div>
+        </div>
+        <div class="seal" aria-label="PYRA logo display">
+          <img src="assets/pyra-logo.jpg" alt="Pyramidion Cryptocurrency logo">
+        </div>
+      </div>
+
+      <div class="wrap bands">
+        <section>
+          <div class="section-head">
+            <h2>Protocol Basics</h2>
+            <p class="note">PYRA is not presented as a conversion service. It operates as a barter credit and unit of account inside a closed barter network.</p>
+          </div>
+          <div class="grid">
+            <div class="card">
+              <div class="label">Base Contract</div>
+              <div class="value">0x6ddd86...63ed3e</div>
+              <p>Base mainnet deployment is live and source verified.</p>
+            </div>
+            <div class="card">
+              <div class="label">Supply on Base</div>
+              <div class="value">100B PYRA</div>
+              <p>Operational mirror for the PYRA closed barter network.</p>
+            </div>
+            <div class="card">
+              <div class="label">Barter Credit</div>
+              <div class="value">btc</div>
+              <p>Barter credit reference for PYRA network accounting.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="barter-credit-history">
+          <div class="section-head">
+            <h2>Barter Credit History</h2>
+            <p class="note" id="barterCreditHistorySummary">Loading the verified daily PYRA series.</p>
+          </div>
+          <div class="history-shell">
+            <div class="history-stats" aria-label="Barter credit history summary">
+              <div class="history-stat">
+                <div class="label">Latest</div>
+                <strong id="historyCurrentValue">btc (barter credit) pending</strong>
+              </div>
+              <div class="history-stat">
+                <div class="label">Period Minimum</div>
+                <strong id="historyMinimumValue">btc (barter credit) pending</strong>
+              </div>
+              <div class="history-stat">
+                <div class="label">Period Maximum</div>
+                <strong id="historyMaximumValue">btc (barter credit) pending</strong>
+              </div>
+            </div>
+            <svg id="barterCreditHistoryChart" class="history-chart" viewBox="0 0 760 300" role="img" aria-label="Loading PYRA barter credit history"></svg>
+            <div class="history-foot">
+              <div class="history-legend" aria-label="History series legend">
+                <span><i class="history-swatch reconstructed" aria-hidden="true"></i>CoinGecko reconstruction</span>
+                <span><i class="history-swatch" aria-hidden="true"></i>Observed PYRA snapshot</span>
+              </div>
+              <a href="api/barter-credit-history.json">Public history data</a>
+              <p class="history-caveat">Reconstructed points apply the PYRA formula to available daily CoinGecko history for the current 1,000-coin market-cap universe. They are estimates, not archived live PYRA snapshots.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <h2>Closed Network Controls</h2>
+              <p class="note">USA-only membership, wallet registration, and final account approval are controlled before member activity opens.</p>
+          </div>
+          <div class="grid">
+            <div class="card">
+              <div class="label">Onboarding Gate</div>
+              <div class="value">Approved members</div>
+                <p>KYC intake, USA-only jurisdiction checks, document review, and registered PYRA wallet addresses are required before activation.</p>
+            </div>
+            <div class="card">
+              <div class="label">Public Rails</div>
+              <div class="value">Known wallets</div>
+              <p>Members may transact on public blockchains, but network status is tied to reviewed roster records and approved wallet addresses.</p>
+            </div>
+            <div class="card">
+              <div class="label">No Cash Conversion</div>
+              <div class="value">No cash-out</div>
+              <p>Pyramidion Cryptocurrency LLC does not cash out, redeem, broker, or convert PYRA for fiat or other tokens.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <h2>Features in Build</h2>
+            <p class="note">Public access will open after the member app, approval workflow, and operating records are ready.</p>
+          </div>
+          <div class="feature-list">
+            <div class="feature">
+              <div class="glyph">1</div>
+              <div>
+                <h3>Member Wallet</h3>
+                <p>Connect wallet, view PYRA balances, receive, and prepare member-approved transfers.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="glyph">2</div>
+              <div>
+                <h3>KYC Approval</h3>
+                  <p>Secure USA-only intake replaces ordinary email for identity documents, with encrypted local storage references and manual account approval.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="glyph">3</div>
+              <div>
+                <h3>Activity Records</h3>
+                <p>Barter activity history and export foundations for network reporting.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="glyph">4</div>
+              <div>
+                <h3>Multichain Footprint</h3>
+                <p>Ethereum, BNB Chain, Algorand B2B, and Base with room for future chain expansion.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="glyph">5</div>
+              <div>
+                <h3>Member Voting</h3>
+                <p>Proposal vote wallets and QR flows for approved members, counted as one registered wallet per vote.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="glyph">6</div>
+              <div>
+                <h3>P2P and Time Bank</h3>
+                <p>Phone-to-phone barter capture, item photo metadata, spoken descriptions, and time-based PYRA review drafts.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="glyph">7</div>
+              <div>
+                <h3>Emergency Recovery</h3>
+                <p>Offline IOU receipts, two-party QR payloads, handoff acknowledgements, recovery packets, and settlement plans for later review.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <h2>Emergency Recovery Loop</h2>
+            <p class="note">Emergency mode is for outages and disaster conditions. It creates review evidence, not a blockchain transfer.</p>
+          </div>
+          <div class="grid">
+            <div class="card">
+              <div class="label">Offline IOU</div>
+              <div class="value">No transfer</div>
+              <p>pyra_emergency_iou records preserve who owes whom, the PYRA amount, the intended chain, and the reason for later settlement.</p>
+            </div>
+            <div class="card">
+              <div class="label">Two-Party Handoff</div>
+              <div class="value">QR copies</div>
+              <p>Debtor and creditor payloads carry the same IOU id so both parties have a chance to preserve the obligation when connectivity returns.</p>
+            </div>
+            <div class="card">
+              <div class="label">Admin Review</div>
+              <div class="value">Reconcile</div>
+              <p>pyra_emergency_recovery_packet and pyra_emergency_settlement_plan exports can be reviewed without KYC documents, seed phrases, private keys, signatures, or broadcasts.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <h2>Public Vote Tally</h2>
+            <p class="note">Proposal results will publish public-safe snapshots after member approval gates and chain indexing are live.</p>
+          </div>
+          <div class="tally">
+            <div class="tally-panel">
+              <div class="label">Snapshot Format</div>
+              <div class="value">pyra_public_vote_tally</div>
+              <p>Public results load from assets/public-vote-tally.json when a privacy-checked snapshot is published.</p>
+            </div>
+            <div class="tally-panel">
+              <div class="label">Privacy Boundary</div>
+              <div class="value">Roster excluded</div>
+              <p>KYC data, member roster records, raw transfers, and voter wallet lists are excluded from public tally output.</p>
+            </div>
+          </div>
+          <div class="tally-counts" aria-label="Public tally preview">
+            <div class="tally-stat">
+              <strong id="publicTallyYes">0</strong>
+              <span>yes votes</span>
+            </div>
+            <div class="tally-stat">
+              <strong id="publicTallyNo">0</strong>
+              <span>no votes</span>
+            </div>
+            <div class="tally-stat">
+              <strong id="publicTallyBlock">pending</strong>
+              <span>last indexed block</span>
+            </div>
+          </div>
+          <p class="tally-source" id="publicTallySource">No public tally snapshot has been published yet.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap footer-content">
+        <span>PYRA Protocol modernization is in progress. No public member actions are live on this page.</span>
+        <nav class="legal-links" aria-label="Legal and privacy links">
+          <a href="mailto:damondanner@gmail.com">Contact</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="privacy.html">Privacy Notice</a>
+          <a href="data-request.html">Data Requests</a>
+          <a href="accessibility.html">Accessibility</a>
+          <a href="security.html">Security</a>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      (() => {
+        const CACHE_KEY = 'pyra-barter-credit-v2';
+        const CACHE_MS = 5 * 60 * 1000;
+        const BARTER_CREDIT_PATH = 'api/barter-credit.json';
+        const PUBLIC_TALLY_PATH = 'assets/public-vote-tally.json';
+        const valueEl = document.getElementById('barterCreditValue');
+        const metaEl = document.getElementById('barterCreditMeta');
+        const tallyYesEl = document.getElementById('publicTallyYes');
+        const tallyNoEl = document.getElementById('publicTallyNo');
+        const tallyBlockEl = document.getElementById('publicTallyBlock');
+        const tallySourceEl = document.getElementById('publicTallySource');
+        const PUBLIC_TALLY_FORBIDDEN_KEYS = [
+          'accepted_votes',
+          'acceptedVotes',
+          'rejected_votes',
+          'rejectedVotes',
+          'decoded_transfers',
+          'decodedTransfers',
+          'raw_transfers',
+          'rawTransfers',
+          'registered_wallets',
+          'registeredWallets',
+          'member_roster',
+          'memberRoster',
+          'member_roster_sha256',
+          'memberRosterSha256',
+          'member_roster_byte_length',
+          'memberRosterByteLength',
+          'wallet_address',
+          'walletAddress',
+          'wallet_addresses',
+          'walletAddresses'
+        ];
+
+        function formatBtc(value) {
+          return new Intl.NumberFormat('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          }).format(value);
+        }
+
+        function formatTime(iso) {
+          return new Intl.DateTimeFormat('en-US', {
+            month: 'short',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit'
+          }).format(new Date(iso));
+        }
+
+        function render(payload, source) {
+          valueEl.textContent = `btc (barter credit) ${formatBtc(payload.value)}`;
+          metaEl.textContent = `${source}. ${payload.count} prices included after null/error and under-one-cent filters. Updated ${formatTime(payload.updatedAt)}.`;
+        }
+
+        function readCache() {
+          try {
+            const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
+            if (cached && Number.isFinite(Number(cached.value)) && Date.now() - Date.parse(cached.fetchedAt) < CACHE_MS) {
+              render(cached, 'Cached reference');
+              return cached;
+            }
+          } catch (error) {
+            localStorage.removeItem(CACHE_KEY);
+          }
+
+          return null;
+        }
+
+        async function fetchPublishedSnapshot() {
+          const bucket = Math.floor(Date.now() / CACHE_MS);
+          const response = await fetch(`${BARTER_CREDIT_PATH}?v=${bucket}`, {
+            headers: { accept: 'application/json' },
+            cache: 'no-store'
+          });
+
+          if (!response.ok) {
+            throw new Error(`Published snapshot returned ${response.status}`);
+          }
+
+          const snapshot = await response.json();
+          if (
+            snapshot.type !== 'pyra_public_barter_credit_snapshot' ||
+            snapshot.status !== 'success' ||
+            !Number.isFinite(Number(snapshot.value))
+          ) {
+            throw new Error('Published barter-credit snapshot is invalid');
+          }
+
+          return {
+            value: Number(snapshot.value),
+            count: Number(snapshot.valid_rows || 0),
+            updatedAt: snapshot.calculated_at || new Date().toISOString(),
+            fetchedAt: new Date().toISOString(),
+            source: snapshot.source || 'Published CoinGecko reference'
+          };
+        }
+
+        async function refreshCredit() {
+          const payload = await fetchPublishedSnapshot();
+          localStorage.setItem(CACHE_KEY, JSON.stringify(payload));
+          render(payload, payload.source);
+        }
+
+        function normalizePublicTallyPayload(payload) {
+          if (payload && payload.type === 'pyra_public_vote_tally') return payload;
+          if (payload && payload.public_snapshot) return payload.public_snapshot;
+          if (payload && payload.snapshot) return payload.snapshot;
+          if (payload && Array.isArray(payload.records) && payload.records.length > 0) return payload.records[0];
+          return null;
+        }
+
+        function isSafePublicTally(snapshot) {
+          const eligibility = snapshot && snapshot.eligibility || {};
+          const privacy = snapshot && snapshot.privacy || {};
+          return Boolean(
+            snapshot &&
+            snapshot.type === 'pyra_public_vote_tally' &&
+            snapshot.counts &&
+            eligibility.approved_member_roster_required === true &&
+            isValidPublicTallyRegisteredWalletCount(eligibility.registered_wallet_count) &&
+            privacy.kyc_data_excluded === true &&
+            privacy.member_roster_excluded === true &&
+            privacy.voter_wallets_excluded === true &&
+            privacy.raw_transfers_excluded === true &&
+            !hasForbiddenPublicTallyKeys(snapshot)
+          );
+        }
+
+        function isValidPublicTallyRegisteredWalletCount(value) {
+          return value === undefined || value === null || (Number.isFinite(Number(value)) && Number(value) >= 0);
+        }
+
+        function hasForbiddenPublicTallyKeys(snapshot) {
+          const text = JSON.stringify(snapshot || {});
+          return PUBLIC_TALLY_FORBIDDEN_KEYS.some(key => text.includes(`"${key}"`));
+        }
+
+        function renderPublicTally(snapshot) {
+          const eligibility = snapshot.eligibility || {};
+          const rosterReference = eligibility.member_roster_snapshot_id
+            ? ` Roster snapshot ${eligibility.member_roster_snapshot_id}; ${eligibility.registered_wallet_count || 0} registered wallets at tally time.`
+            : '';
+
+          tallyYesEl.textContent = String(snapshot.counts.yes || 0);
+          tallyNoEl.textContent = String(snapshot.counts.no || 0);
+          tallyBlockEl.textContent = snapshot.source && snapshot.source.last_indexed_block
+            ? String(snapshot.source.last_indexed_block)
+            : 'pending';
+          tallySourceEl.textContent = `${snapshot.proposal.title || snapshot.proposal.id} on ${snapshot.proposal.chain_id}; ${snapshot.counts.accepted || 0} accepted, ${snapshot.counts.rejected || 0} rejected. Updated ${formatTime(snapshot.generated_at)}.${rosterReference}`;
+        }
+
+        async function refreshPublicTally() {
+          const response = await fetch(PUBLIC_TALLY_PATH, {
+            headers: { accept: 'application/json' },
+            cache: 'no-store'
+          });
+
+          if (!response.ok) return;
+
+          const snapshot = normalizePublicTallyPayload(await response.json());
+          if (isSafePublicTally(snapshot)) {
+            renderPublicTally(snapshot);
+          }
+        }
+
+        const cachedCredit = readCache();
+        refreshPublicTally().catch(() => {});
+        if (!cachedCredit) {
+          refreshCredit().catch(() => {
+            valueEl.textContent = 'btc unavailable';
+            metaEl.textContent = 'The published barter-credit reference is temporarily unavailable.';
+          });
+        }
+        setInterval(() => refreshCredit().catch(() => {}), CACHE_MS);
+      })();
+    </script>
+    <script src="assets/barter-credit-chart.js"></script>
+  </body>
+</html>

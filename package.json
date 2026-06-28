@@ -1,0 +1,8 @@
+{
+  "name": "pyra-public-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/generate-public-barter-credit.js --self-test && node scripts/update-public-barter-credit-history.js --self-test && node apps/web/test/web-static.test.js"
+  }
+}

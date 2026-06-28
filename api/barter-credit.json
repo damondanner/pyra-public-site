@@ -1,0 +1,32 @@
+{
+  "status": "success",
+  "value": 299.89,
+  "symbol": "btc",
+  "label": "PYRA Barter Credit",
+  "source": "CoinGecko API",
+  "calculation_method": "simple_average",
+  "min_price_usd": 0.01,
+  "decimal_places": 2,
+  "total_rows": 1000,
+  "valid_rows": 809,
+  "filtered": {
+    "missing_price": 0,
+    "invalid_price": 0,
+    "below_minimum": 191
+  },
+  "stats": {
+    "min": 0.01,
+    "max": 60299,
+    "median": 0.3
+  },
+  "calculated_at": "2026-06-27T19:54:30.965Z",
+  "type": "pyra_public_barter_credit_snapshot",
+  "version": 1,
+  "market_pages_requested": 4,
+  "market_page_size": 250,
+  "privacy": {
+    "api_key_excluded": true,
+    "raw_market_rows_excluded": true
+  }
+}
+

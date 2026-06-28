@@ -1,0 +1,6 @@
+{
+  "type": "pyra_public_vote_tally_status",
+  "version": 1,
+  "status": "not_published",
+  "message": "No privacy-reviewed public vote tally has been published."
+}

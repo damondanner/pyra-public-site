@@ -1,0 +1,20 @@
+{
+  "service": "PYRA Protocol public data",
+  "version": 1,
+  "canonical_base_url": "https://pyraprotocol.com/api",
+  "cors": "public-read",
+  "endpoints": {
+    "barter_credit_latest": {
+      "url": "https://pyraprotocol.com/api/barter-credit.json",
+      "update_target_seconds": 300,
+      "format": "pyra_public_barter_credit_snapshot"
+    },
+    "barter_credit_history": {
+      "url": "https://pyraprotocol.com/api/barter-credit-history.json",
+      "frequency": "daily",
+      "retention_days": 1827,
+      "format": "pyra_public_barter_credit_history"
+    }
+  },
+  "client_note": "Use the PYRA endpoints instead of calling CoinGecko directly. Check calculated_at or updated_at for freshness."
+}

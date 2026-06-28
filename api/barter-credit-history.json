@@ -1,0 +1,3681 @@
+{
+  "type": "pyra_public_barter_credit_history",
+  "version": 1,
+  "frequency": "daily",
+  "retention_days": 1827,
+  "started_at": "2025-06-28T00:00:00.000Z",
+  "updated_at": "2026-06-27T19:54:30.965Z",
+  "source_latest": "/api/barter-credit.json",
+  "historical_reconstruction": true,
+  "caveat": "Reconstructed points apply the PYRA formula to available CoinGecko historical data; observed points are recorded live PYRA snapshots.",
+  "reconstruction": {
+    "provider": "CoinGecko API",
+    "api_tier": "demo",
+    "interval": "daily_utc",
+    "requested_days": 365,
+    "universe_selection": "current_market_cap_order",
+    "requested_coin_count": 1000,
+    "successful_coin_count": 1000,
+    "failed_coin_count": 0,
+    "includes_inactive_coins": false,
+    "filters": {
+      "null_and_error_prices_removed": true,
+      "below_one_cent_removed": true,
+      "average": "simple_arithmetic_mean"
+    },
+    "raw_market_rows_excluded": true,
+    "api_key_excluded": true
+  },
+  "points": [
+    {
+      "date": "2025-06-28",
+      "kind": "reconstructed",
+      "value": 272.67,
+      "calculated_at": "2025-06-28T00:00:00.000Z",
+      "valid_rows": 577,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-06-29",
+      "kind": "reconstructed",
+      "value": 273.61,
+      "calculated_at": "2025-06-29T00:00:00.000Z",
+      "valid_rows": 578,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-06-30",
+      "kind": "reconstructed",
+      "value": 275.72,
+      "calculated_at": "2025-06-30T00:00:00.000Z",
+      "valid_rows": 583,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-01",
+      "kind": "reconstructed",
+      "value": 274.66,
+      "calculated_at": "2025-07-01T00:00:00.000Z",
+      "valid_rows": 586,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-02",
+      "kind": "reconstructed",
+      "value": 270,
+      "calculated_at": "2025-07-02T00:00:00.000Z",
+      "valid_rows": 584,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-03",
+      "kind": "reconstructed",
+      "value": 267.28,
+      "calculated_at": "2025-07-03T00:00:00.000Z",
+      "valid_rows": 605,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-04",
+      "kind": "reconstructed",
+      "value": 266.74,
+      "calculated_at": "2025-07-04T00:00:00.000Z",
+      "valid_rows": 608,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-05",
+      "kind": "reconstructed",
+      "value": 263.28,
+      "calculated_at": "2025-07-05T00:00:00.000Z",
+      "valid_rows": 606,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-06",
+      "kind": "reconstructed",
+      "value": 264.23,
+      "calculated_at": "2025-07-06T00:00:00.000Z",
+      "valid_rows": 604,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-07",
+      "kind": "reconstructed",
+      "value": 266.39,
+      "calculated_at": "2025-07-07T00:00:00.000Z",
+      "valid_rows": 604,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-08",
+      "kind": "reconstructed",
+      "value": 264.83,
+      "calculated_at": "2025-07-08T00:00:00.000Z",
+      "valid_rows": 604,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-09",
+      "kind": "reconstructed",
+      "value": 263.76,
+      "calculated_at": "2025-07-09T00:00:00.000Z",
+      "valid_rows": 608,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-10",
+      "kind": "reconstructed",
+      "value": 268.83,
+      "calculated_at": "2025-07-10T00:00:00.000Z",
+      "valid_rows": 609,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-11",
+      "kind": "reconstructed",
+      "value": 276.33,
+      "calculated_at": "2025-07-11T00:00:00.000Z",
+      "valid_rows": 611,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-12",
+      "kind": "reconstructed",
+      "value": 279.11,
+      "calculated_at": "2025-07-12T00:00:00.000Z",
+      "valid_rows": 612,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-13",
+      "kind": "reconstructed",
+      "value": 280.47,
+      "calculated_at": "2025-07-13T00:00:00.000Z",
+      "valid_rows": 611,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-14",
+      "kind": "reconstructed",
+      "value": 284.25,
+      "calculated_at": "2025-07-14T00:00:00.000Z",
+      "valid_rows": 611,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-15",
+      "kind": "reconstructed",
+      "value": 283.5,
+      "calculated_at": "2025-07-15T00:00:00.000Z",
+      "valid_rows": 615,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-16",
+      "kind": "reconstructed",
+      "value": 279.6,
+      "calculated_at": "2025-07-16T00:00:00.000Z",
+      "valid_rows": 619,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-17",
+      "kind": "reconstructed",
+      "value": 282.3,
+      "calculated_at": "2025-07-17T00:00:00.000Z",
+      "valid_rows": 620,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-18",
+      "kind": "reconstructed",
+      "value": 283.12,
+      "calculated_at": "2025-07-18T00:00:00.000Z",
+      "valid_rows": 622,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-19",
+      "kind": "reconstructed",
+      "value": 281.35,
+      "calculated_at": "2025-07-19T00:00:00.000Z",
+      "valid_rows": 621,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-20",
+      "kind": "reconstructed",
+      "value": 281.08,
+      "calculated_at": "2025-07-20T00:00:00.000Z",
+      "valid_rows": 622,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-21",
+      "kind": "reconstructed",
+      "value": 279.58,
+      "calculated_at": "2025-07-21T00:00:00.000Z",
+      "valid_rows": 626,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-22",
+      "kind": "reconstructed",
+      "value": 278.71,
+      "calculated_at": "2025-07-22T00:00:00.000Z",
+      "valid_rows": 629,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-23",
+      "kind": "reconstructed",
+      "value": 283.47,
+      "calculated_at": "2025-07-23T00:00:00.000Z",
+      "valid_rows": 627,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-24",
+      "kind": "reconstructed",
+      "value": 279.54,
+      "calculated_at": "2025-07-24T00:00:00.000Z",
+      "valid_rows": 626,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-25",
+      "kind": "reconstructed",
+      "value": 278.16,
+      "calculated_at": "2025-07-25T00:00:00.000Z",
+      "valid_rows": 628,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-26",
+      "kind": "reconstructed",
+      "value": 277.78,
+      "calculated_at": "2025-07-26T00:00:00.000Z",
+      "valid_rows": 627,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-27",
+      "kind": "reconstructed",
+      "value": 268.47,
+      "calculated_at": "2025-07-27T00:00:00.000Z",
+      "valid_rows": 626,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-28",
+      "kind": "reconstructed",
+      "value": 280.96,
+      "calculated_at": "2025-07-28T00:00:00.000Z",
+      "valid_rows": 629,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-29",
+      "kind": "reconstructed",
+      "value": 276.87,
+      "calculated_at": "2025-07-29T00:00:00.000Z",
+      "valid_rows": 630,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-30",
+      "kind": "reconstructed",
+      "value": 275.98,
+      "calculated_at": "2025-07-30T00:00:00.000Z",
+      "valid_rows": 629,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-07-31",
+      "kind": "reconstructed",
+      "value": 276.26,
+      "calculated_at": "2025-07-31T00:00:00.000Z",
+      "valid_rows": 630,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-01",
+      "kind": "reconstructed",
+      "value": 271.45,
+      "calculated_at": "2025-08-01T00:00:00.000Z",
+      "valid_rows": 629,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-02",
+      "kind": "reconstructed",
+      "value": 266.6,
+      "calculated_at": "2025-08-02T00:00:00.000Z",
+      "valid_rows": 628,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-03",
+      "kind": "reconstructed",
+      "value": 265.61,
+      "calculated_at": "2025-08-03T00:00:00.000Z",
+      "valid_rows": 625,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-04",
+      "kind": "reconstructed",
+      "value": 267.31,
+      "calculated_at": "2025-08-04T00:00:00.000Z",
+      "valid_rows": 628,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-05",
+      "kind": "reconstructed",
+      "value": 269.72,
+      "calculated_at": "2025-08-05T00:00:00.000Z",
+      "valid_rows": 629,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-06",
+      "kind": "reconstructed",
+      "value": 267.73,
+      "calculated_at": "2025-08-06T00:00:00.000Z",
+      "valid_rows": 628,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-07",
+      "kind": "reconstructed",
+      "value": 267.61,
+      "calculated_at": "2025-08-07T00:00:00.000Z",
+      "valid_rows": 632,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-08",
+      "kind": "reconstructed",
+      "value": 262.46,
+      "calculated_at": "2025-08-08T00:00:00.000Z",
+      "valid_rows": 633,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-09",
+      "kind": "reconstructed",
+      "value": 271.56,
+      "calculated_at": "2025-08-09T00:00:00.000Z",
+      "valid_rows": 638,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-10",
+      "kind": "reconstructed",
+      "value": 274.23,
+      "calculated_at": "2025-08-10T00:00:00.000Z",
+      "valid_rows": 635,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-11",
+      "kind": "reconstructed",
+      "value": 277.63,
+      "calculated_at": "2025-08-11T00:00:00.000Z",
+      "valid_rows": 637,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-12",
+      "kind": "reconstructed",
+      "value": 275.57,
+      "calculated_at": "2025-08-12T00:00:00.000Z",
+      "valid_rows": 638,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-13",
+      "kind": "reconstructed",
+      "value": 279.74,
+      "calculated_at": "2025-08-13T00:00:00.000Z",
+      "valid_rows": 640,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-14",
+      "kind": "reconstructed",
+      "value": 285.57,
+      "calculated_at": "2025-08-14T00:00:00.000Z",
+      "valid_rows": 642,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-15",
+      "kind": "reconstructed",
+      "value": 275.83,
+      "calculated_at": "2025-08-15T00:00:00.000Z",
+      "valid_rows": 641,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-16",
+      "kind": "reconstructed",
+      "value": 272.67,
+      "calculated_at": "2025-08-16T00:00:00.000Z",
+      "valid_rows": 642,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-17",
+      "kind": "reconstructed",
+      "value": 273.16,
+      "calculated_at": "2025-08-17T00:00:00.000Z",
+      "valid_rows": 641,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-18",
+      "kind": "reconstructed",
+      "value": 272.73,
+      "calculated_at": "2025-08-18T00:00:00.000Z",
+      "valid_rows": 644,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-19",
+      "kind": "reconstructed",
+      "value": 270.74,
+      "calculated_at": "2025-08-19T00:00:00.000Z",
+      "valid_rows": 641,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-20",
+      "kind": "reconstructed",
+      "value": 263.72,
+      "calculated_at": "2025-08-20T00:00:00.000Z",
+      "valid_rows": 643,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-21",
+      "kind": "reconstructed",
+      "value": 268.26,
+      "calculated_at": "2025-08-21T00:00:00.000Z",
+      "valid_rows": 646,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-22",
+      "kind": "reconstructed",
+      "value": 267.38,
+      "calculated_at": "2025-08-22T00:00:00.000Z",
+      "valid_rows": 643,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-23",
+      "kind": "reconstructed",
+      "value": 278.04,
+      "calculated_at": "2025-08-23T00:00:00.000Z",
+      "valid_rows": 647,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-24",
+      "kind": "reconstructed",
+      "value": 277.02,
+      "calculated_at": "2025-08-24T00:00:00.000Z",
+      "valid_rows": 645,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-25",
+      "kind": "reconstructed",
+      "value": 273.64,
+      "calculated_at": "2025-08-25T00:00:00.000Z",
+      "valid_rows": 645,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-26",
+      "kind": "reconstructed",
+      "value": 267.43,
+      "calculated_at": "2025-08-26T00:00:00.000Z",
+      "valid_rows": 645,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-27",
+      "kind": "reconstructed",
+      "value": 270.14,
+      "calculated_at": "2025-08-27T00:00:00.000Z",
+      "valid_rows": 649,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-28",
+      "kind": "reconstructed",
+      "value": 266.41,
+      "calculated_at": "2025-08-28T00:00:00.000Z",
+      "valid_rows": 652,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-29",
+      "kind": "reconstructed",
+      "value": 268.79,
+      "calculated_at": "2025-08-29T00:00:00.000Z",
+      "valid_rows": 652,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-30",
+      "kind": "reconstructed",
+      "value": 251.66,
+      "calculated_at": "2025-08-30T00:00:00.000Z",
+      "valid_rows": 649,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-08-31",
+      "kind": "reconstructed",
+      "value": 252.07,
+      "calculated_at": "2025-08-31T00:00:00.000Z",
+      "valid_rows": 650,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-01",
+      "kind": "reconstructed",
+      "value": 260.81,
+      "calculated_at": "2025-09-01T00:00:00.000Z",
+      "valid_rows": 654,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-02",
+      "kind": "reconstructed",
+      "value": 261.31,
+      "calculated_at": "2025-09-02T00:00:00.000Z",
+      "valid_rows": 668,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-03",
+      "kind": "reconstructed",
+      "value": 265.03,
+      "calculated_at": "2025-09-03T00:00:00.000Z",
+      "valid_rows": 667,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-04",
+      "kind": "reconstructed",
+      "value": 264.56,
+      "calculated_at": "2025-09-04T00:00:00.000Z",
+      "valid_rows": 671,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-05",
+      "kind": "reconstructed",
+      "value": 262.15,
+      "calculated_at": "2025-09-05T00:00:00.000Z",
+      "valid_rows": 668,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-06",
+      "kind": "reconstructed",
+      "value": 250.93,
+      "calculated_at": "2025-09-06T00:00:00.000Z",
+      "valid_rows": 667,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-07",
+      "kind": "reconstructed",
+      "value": 262.53,
+      "calculated_at": "2025-09-07T00:00:00.000Z",
+      "valid_rows": 664,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-08",
+      "kind": "reconstructed",
+      "value": 262.97,
+      "calculated_at": "2025-09-08T00:00:00.000Z",
+      "valid_rows": 670,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-09",
+      "kind": "reconstructed",
+      "value": 264.6,
+      "calculated_at": "2025-09-09T00:00:00.000Z",
+      "valid_rows": 674,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-10",
+      "kind": "reconstructed",
+      "value": 251.67,
+      "calculated_at": "2025-09-10T00:00:00.000Z",
+      "valid_rows": 674,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-11",
+      "kind": "reconstructed",
+      "value": 266.08,
+      "calculated_at": "2025-09-11T00:00:00.000Z",
+      "valid_rows": 678,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-12",
+      "kind": "reconstructed",
+      "value": 268.42,
+      "calculated_at": "2025-09-12T00:00:00.000Z",
+      "valid_rows": 683,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-13",
+      "kind": "reconstructed",
+      "value": 271.11,
+      "calculated_at": "2025-09-13T00:00:00.000Z",
+      "valid_rows": 683,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-14",
+      "kind": "reconstructed",
+      "value": 272.25,
+      "calculated_at": "2025-09-14T00:00:00.000Z",
+      "valid_rows": 683,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-15",
+      "kind": "reconstructed",
+      "value": 269.97,
+      "calculated_at": "2025-09-15T00:00:00.000Z",
+      "valid_rows": 681,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-16",
+      "kind": "reconstructed",
+      "value": 269.41,
+      "calculated_at": "2025-09-16T00:00:00.000Z",
+      "valid_rows": 680,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-17",
+      "kind": "reconstructed",
+      "value": 269.57,
+      "calculated_at": "2025-09-17T00:00:00.000Z",
+      "valid_rows": 683,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-18",
+      "kind": "reconstructed",
+      "value": 269.89,
+      "calculated_at": "2025-09-18T00:00:00.000Z",
+      "valid_rows": 683,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-19",
+      "kind": "reconstructed",
+      "value": 270.37,
+      "calculated_at": "2025-09-19T00:00:00.000Z",
+      "valid_rows": 685,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-20",
+      "kind": "reconstructed",
+      "value": 267.59,
+      "calculated_at": "2025-09-20T00:00:00.000Z",
+      "valid_rows": 682,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-21",
+      "kind": "reconstructed",
+      "value": 256.34,
+      "calculated_at": "2025-09-21T00:00:00.000Z",
+      "valid_rows": 684,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-22",
+      "kind": "reconstructed",
+      "value": 254.36,
+      "calculated_at": "2025-09-22T00:00:00.000Z",
+      "valid_rows": 686,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-23",
+      "kind": "reconstructed",
+      "value": 250.21,
+      "calculated_at": "2025-09-23T00:00:00.000Z",
+      "valid_rows": 682,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-24",
+      "kind": "reconstructed",
+      "value": 249.88,
+      "calculated_at": "2025-09-24T00:00:00.000Z",
+      "valid_rows": 682,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-25",
+      "kind": "reconstructed",
+      "value": 251.65,
+      "calculated_at": "2025-09-25T00:00:00.000Z",
+      "valid_rows": 684,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-26",
+      "kind": "reconstructed",
+      "value": 242.46,
+      "calculated_at": "2025-09-26T00:00:00.000Z",
+      "valid_rows": 686,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-27",
+      "kind": "reconstructed",
+      "value": 243.32,
+      "calculated_at": "2025-09-27T00:00:00.000Z",
+      "valid_rows": 690,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-28",
+      "kind": "reconstructed",
+      "value": 252.66,
+      "calculated_at": "2025-09-28T00:00:00.000Z",
+      "valid_rows": 690,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-29",
+      "kind": "reconstructed",
+      "value": 255.82,
+      "calculated_at": "2025-09-29T00:00:00.000Z",
+      "valid_rows": 694,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-09-30",
+      "kind": "reconstructed",
+      "value": 259.38,
+      "calculated_at": "2025-09-30T00:00:00.000Z",
+      "valid_rows": 695,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-01",
+      "kind": "reconstructed",
+      "value": 259.25,
+      "calculated_at": "2025-10-01T00:00:00.000Z",
+      "valid_rows": 695,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-02",
+      "kind": "reconstructed",
+      "value": 265.73,
+      "calculated_at": "2025-10-02T00:00:00.000Z",
+      "valid_rows": 696,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-03",
+      "kind": "reconstructed",
+      "value": 268.53,
+      "calculated_at": "2025-10-03T00:00:00.000Z",
+      "valid_rows": 700,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-04",
+      "kind": "reconstructed",
+      "value": 271.35,
+      "calculated_at": "2025-10-04T00:00:00.000Z",
+      "valid_rows": 699,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-05",
+      "kind": "reconstructed",
+      "value": 271.86,
+      "calculated_at": "2025-10-05T00:00:00.000Z",
+      "valid_rows": 697,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-06",
+      "kind": "reconstructed",
+      "value": 272.82,
+      "calculated_at": "2025-10-06T00:00:00.000Z",
+      "valid_rows": 697,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-07",
+      "kind": "reconstructed",
+      "value": 275.48,
+      "calculated_at": "2025-10-07T00:00:00.000Z",
+      "valid_rows": 701,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-08",
+      "kind": "reconstructed",
+      "value": 269.63,
+      "calculated_at": "2025-10-08T00:00:00.000Z",
+      "valid_rows": 699,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-09",
+      "kind": "reconstructed",
+      "value": 271.81,
+      "calculated_at": "2025-10-09T00:00:00.000Z",
+      "valid_rows": 702,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-10",
+      "kind": "reconstructed",
+      "value": 268.34,
+      "calculated_at": "2025-10-10T00:00:00.000Z",
+      "valid_rows": 700,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-11",
+      "kind": "reconstructed",
+      "value": 255.28,
+      "calculated_at": "2025-10-11T00:00:00.000Z",
+      "valid_rows": 689,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-12",
+      "kind": "reconstructed",
+      "value": 253.3,
+      "calculated_at": "2025-10-12T00:00:00.000Z",
+      "valid_rows": 684,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-13",
+      "kind": "reconstructed",
+      "value": 261.59,
+      "calculated_at": "2025-10-13T00:00:00.000Z",
+      "valid_rows": 688,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-14",
+      "kind": "reconstructed",
+      "value": 260.24,
+      "calculated_at": "2025-10-14T00:00:00.000Z",
+      "valid_rows": 695,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-15",
+      "kind": "reconstructed",
+      "value": 257.35,
+      "calculated_at": "2025-10-15T00:00:00.000Z",
+      "valid_rows": 693,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-16",
+      "kind": "reconstructed",
+      "value": 253.15,
+      "calculated_at": "2025-10-16T00:00:00.000Z",
+      "valid_rows": 692,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-17",
+      "kind": "reconstructed",
+      "value": 248.27,
+      "calculated_at": "2025-10-17T00:00:00.000Z",
+      "valid_rows": 693,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-18",
+      "kind": "reconstructed",
+      "value": 244.02,
+      "calculated_at": "2025-10-18T00:00:00.000Z",
+      "valid_rows": 692,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-19",
+      "kind": "reconstructed",
+      "value": 246.33,
+      "calculated_at": "2025-10-19T00:00:00.000Z",
+      "valid_rows": 692,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-20",
+      "kind": "reconstructed",
+      "value": 248.57,
+      "calculated_at": "2025-10-20T00:00:00.000Z",
+      "valid_rows": 695,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-21",
+      "kind": "reconstructed",
+      "value": 251.67,
+      "calculated_at": "2025-10-21T00:00:00.000Z",
+      "valid_rows": 696,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-22",
+      "kind": "reconstructed",
+      "value": 237.52,
+      "calculated_at": "2025-10-22T00:00:00.000Z",
+      "valid_rows": 697,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-23",
+      "kind": "reconstructed",
+      "value": 243.85,
+      "calculated_at": "2025-10-23T00:00:00.000Z",
+      "valid_rows": 700,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-24",
+      "kind": "reconstructed",
+      "value": 246.55,
+      "calculated_at": "2025-10-24T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-25",
+      "kind": "reconstructed",
+      "value": 247.69,
+      "calculated_at": "2025-10-25T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-26",
+      "kind": "reconstructed",
+      "value": 249.47,
+      "calculated_at": "2025-10-26T00:00:00.000Z",
+      "valid_rows": 703,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-27",
+      "kind": "reconstructed",
+      "value": 253.98,
+      "calculated_at": "2025-10-27T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-28",
+      "kind": "reconstructed",
+      "value": 254.35,
+      "calculated_at": "2025-10-28T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-29",
+      "kind": "reconstructed",
+      "value": 251.4,
+      "calculated_at": "2025-10-29T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-30",
+      "kind": "reconstructed",
+      "value": 251.92,
+      "calculated_at": "2025-10-30T00:00:00.000Z",
+      "valid_rows": 706,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-10-31",
+      "kind": "reconstructed",
+      "value": 250.75,
+      "calculated_at": "2025-10-31T00:00:00.000Z",
+      "valid_rows": 700,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-01",
+      "kind": "reconstructed",
+      "value": 251.67,
+      "calculated_at": "2025-11-01T00:00:00.000Z",
+      "valid_rows": 703,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-02",
+      "kind": "reconstructed",
+      "value": 252.23,
+      "calculated_at": "2025-11-02T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-03",
+      "kind": "reconstructed",
+      "value": 253.2,
+      "calculated_at": "2025-11-03T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-04",
+      "kind": "reconstructed",
+      "value": 245.94,
+      "calculated_at": "2025-11-04T00:00:00.000Z",
+      "valid_rows": 699,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-05",
+      "kind": "reconstructed",
+      "value": 236.33,
+      "calculated_at": "2025-11-05T00:00:00.000Z",
+      "valid_rows": 701,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-06",
+      "kind": "reconstructed",
+      "value": 239.53,
+      "calculated_at": "2025-11-06T00:00:00.000Z",
+      "valid_rows": 705,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-07",
+      "kind": "reconstructed",
+      "value": 235.54,
+      "calculated_at": "2025-11-07T00:00:00.000Z",
+      "valid_rows": 705,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-08",
+      "kind": "reconstructed",
+      "value": 239.06,
+      "calculated_at": "2025-11-08T00:00:00.000Z",
+      "valid_rows": 708,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-09",
+      "kind": "reconstructed",
+      "value": 237.04,
+      "calculated_at": "2025-11-09T00:00:00.000Z",
+      "valid_rows": 709,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-10",
+      "kind": "reconstructed",
+      "value": 233.95,
+      "calculated_at": "2025-11-10T00:00:00.000Z",
+      "valid_rows": 707,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-11",
+      "kind": "reconstructed",
+      "value": 235.18,
+      "calculated_at": "2025-11-11T00:00:00.000Z",
+      "valid_rows": 709,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-12",
+      "kind": "reconstructed",
+      "value": 230.45,
+      "calculated_at": "2025-11-12T00:00:00.000Z",
+      "valid_rows": 707,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-13",
+      "kind": "reconstructed",
+      "value": 227.93,
+      "calculated_at": "2025-11-13T00:00:00.000Z",
+      "valid_rows": 709,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-14",
+      "kind": "reconstructed",
+      "value": 224.33,
+      "calculated_at": "2025-11-14T00:00:00.000Z",
+      "valid_rows": 708,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-15",
+      "kind": "reconstructed",
+      "value": 216.84,
+      "calculated_at": "2025-11-15T00:00:00.000Z",
+      "valid_rows": 705,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-16",
+      "kind": "reconstructed",
+      "value": 218.58,
+      "calculated_at": "2025-11-16T00:00:00.000Z",
+      "valid_rows": 703,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-17",
+      "kind": "reconstructed",
+      "value": 216.39,
+      "calculated_at": "2025-11-17T00:00:00.000Z",
+      "valid_rows": 703,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-18",
+      "kind": "reconstructed",
+      "value": 212.71,
+      "calculated_at": "2025-11-18T00:00:00.000Z",
+      "valid_rows": 703,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-19",
+      "kind": "reconstructed",
+      "value": 221.49,
+      "calculated_at": "2025-11-19T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-20",
+      "kind": "reconstructed",
+      "value": 219.09,
+      "calculated_at": "2025-11-20T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-21",
+      "kind": "reconstructed",
+      "value": 211,
+      "calculated_at": "2025-11-21T00:00:00.000Z",
+      "valid_rows": 702,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-22",
+      "kind": "reconstructed",
+      "value": 208.53,
+      "calculated_at": "2025-11-22T00:00:00.000Z",
+      "valid_rows": 700,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-23",
+      "kind": "reconstructed",
+      "value": 207.53,
+      "calculated_at": "2025-11-23T00:00:00.000Z",
+      "valid_rows": 698,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-24",
+      "kind": "reconstructed",
+      "value": 210.94,
+      "calculated_at": "2025-11-24T00:00:00.000Z",
+      "valid_rows": 700,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-25",
+      "kind": "reconstructed",
+      "value": 205.83,
+      "calculated_at": "2025-11-25T00:00:00.000Z",
+      "valid_rows": 706,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-26",
+      "kind": "reconstructed",
+      "value": 210.84,
+      "calculated_at": "2025-11-26T00:00:00.000Z",
+      "valid_rows": 710,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-27",
+      "kind": "reconstructed",
+      "value": 216.3,
+      "calculated_at": "2025-11-27T00:00:00.000Z",
+      "valid_rows": 709,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-28",
+      "kind": "reconstructed",
+      "value": 217.29,
+      "calculated_at": "2025-11-28T00:00:00.000Z",
+      "valid_rows": 708,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-29",
+      "kind": "reconstructed",
+      "value": 217.68,
+      "calculated_at": "2025-11-29T00:00:00.000Z",
+      "valid_rows": 707,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-11-30",
+      "kind": "reconstructed",
+      "value": 222.06,
+      "calculated_at": "2025-11-30T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-01",
+      "kind": "reconstructed",
+      "value": 219.88,
+      "calculated_at": "2025-12-01T00:00:00.000Z",
+      "valid_rows": 705,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-02",
+      "kind": "reconstructed",
+      "value": 206.46,
+      "calculated_at": "2025-12-02T00:00:00.000Z",
+      "valid_rows": 700,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-03",
+      "kind": "reconstructed",
+      "value": 212.79,
+      "calculated_at": "2025-12-03T00:00:00.000Z",
+      "valid_rows": 705,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-04",
+      "kind": "reconstructed",
+      "value": 218.18,
+      "calculated_at": "2025-12-04T00:00:00.000Z",
+      "valid_rows": 704,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-05",
+      "kind": "reconstructed",
+      "value": 215.42,
+      "calculated_at": "2025-12-05T00:00:00.000Z",
+      "valid_rows": 705,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-06",
+      "kind": "reconstructed",
+      "value": 217.29,
+      "calculated_at": "2025-12-06T00:00:00.000Z",
+      "valid_rows": 707,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-07",
+      "kind": "reconstructed",
+      "value": 216.42,
+      "calculated_at": "2025-12-07T00:00:00.000Z",
+      "valid_rows": 710,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-08",
+      "kind": "reconstructed",
+      "value": 218.97,
+      "calculated_at": "2025-12-08T00:00:00.000Z",
+      "valid_rows": 708,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-09",
+      "kind": "reconstructed",
+      "value": 214.9,
+      "calculated_at": "2025-12-09T00:00:00.000Z",
+      "valid_rows": 712,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-10",
+      "kind": "reconstructed",
+      "value": 216.17,
+      "calculated_at": "2025-12-10T00:00:00.000Z",
+      "valid_rows": 713,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-11",
+      "kind": "reconstructed",
+      "value": 221.78,
+      "calculated_at": "2025-12-11T00:00:00.000Z",
+      "valid_rows": 717,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-12",
+      "kind": "reconstructed",
+      "value": 223.17,
+      "calculated_at": "2025-12-12T00:00:00.000Z",
+      "valid_rows": 716,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-13",
+      "kind": "reconstructed",
+      "value": 220.82,
+      "calculated_at": "2025-12-13T00:00:00.000Z",
+      "valid_rows": 713,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-14",
+      "kind": "reconstructed",
+      "value": 219.14,
+      "calculated_at": "2025-12-14T00:00:00.000Z",
+      "valid_rows": 713,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-15",
+      "kind": "reconstructed",
+      "value": 216.3,
+      "calculated_at": "2025-12-15T00:00:00.000Z",
+      "valid_rows": 711,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-16",
+      "kind": "reconstructed",
+      "value": 212.7,
+      "calculated_at": "2025-12-16T00:00:00.000Z",
+      "valid_rows": 710,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-17",
+      "kind": "reconstructed",
+      "value": 213.7,
+      "calculated_at": "2025-12-17T00:00:00.000Z",
+      "valid_rows": 713,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-18",
+      "kind": "reconstructed",
+      "value": 208.69,
+      "calculated_at": "2025-12-18T00:00:00.000Z",
+      "valid_rows": 715,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-19",
+      "kind": "reconstructed",
+      "value": 209.83,
+      "calculated_at": "2025-12-19T00:00:00.000Z",
+      "valid_rows": 708,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-20",
+      "kind": "reconstructed",
+      "value": 213.78,
+      "calculated_at": "2025-12-20T00:00:00.000Z",
+      "valid_rows": 715,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-21",
+      "kind": "reconstructed",
+      "value": 214.85,
+      "calculated_at": "2025-12-21T00:00:00.000Z",
+      "valid_rows": 714,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-22",
+      "kind": "reconstructed",
+      "value": 215.68,
+      "calculated_at": "2025-12-22T00:00:00.000Z",
+      "valid_rows": 713,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-23",
+      "kind": "reconstructed",
+      "value": 215.5,
+      "calculated_at": "2025-12-23T00:00:00.000Z",
+      "valid_rows": 714,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-24",
+      "kind": "reconstructed",
+      "value": 213.51,
+      "calculated_at": "2025-12-24T00:00:00.000Z",
+      "valid_rows": 714,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-25",
+      "kind": "reconstructed",
+      "value": 214.56,
+      "calculated_at": "2025-12-25T00:00:00.000Z",
+      "valid_rows": 713,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-26",
+      "kind": "reconstructed",
+      "value": 208.13,
+      "calculated_at": "2025-12-26T00:00:00.000Z",
+      "valid_rows": 708,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-27",
+      "kind": "reconstructed",
+      "value": 206.66,
+      "calculated_at": "2025-12-27T00:00:00.000Z",
+      "valid_rows": 715,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-28",
+      "kind": "reconstructed",
+      "value": 213.39,
+      "calculated_at": "2025-12-28T00:00:00.000Z",
+      "valid_rows": 718,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-29",
+      "kind": "reconstructed",
+      "value": 212.59,
+      "calculated_at": "2025-12-29T00:00:00.000Z",
+      "valid_rows": 721,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-30",
+      "kind": "reconstructed",
+      "value": 204.97,
+      "calculated_at": "2025-12-30T00:00:00.000Z",
+      "valid_rows": 715,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2025-12-31",
+      "kind": "reconstructed",
+      "value": 213.72,
+      "calculated_at": "2025-12-31T00:00:00.000Z",
+      "valid_rows": 716,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-01",
+      "kind": "reconstructed",
+      "value": 214.77,
+      "calculated_at": "2026-01-01T00:00:00.000Z",
+      "valid_rows": 711,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-02",
+      "kind": "reconstructed",
+      "value": 214.34,
+      "calculated_at": "2026-01-02T00:00:00.000Z",
+      "valid_rows": 718,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-03",
+      "kind": "reconstructed",
+      "value": 210.01,
+      "calculated_at": "2026-01-03T00:00:00.000Z",
+      "valid_rows": 718,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-04",
+      "kind": "reconstructed",
+      "value": 218.75,
+      "calculated_at": "2026-01-04T00:00:00.000Z",
+      "valid_rows": 718,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-05",
+      "kind": "reconstructed",
+      "value": 218.73,
+      "calculated_at": "2026-01-05T00:00:00.000Z",
+      "valid_rows": 723,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-06",
+      "kind": "reconstructed",
+      "value": 221.74,
+      "calculated_at": "2026-01-06T00:00:00.000Z",
+      "valid_rows": 728,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-07",
+      "kind": "reconstructed",
+      "value": 221.42,
+      "calculated_at": "2026-01-07T00:00:00.000Z",
+      "valid_rows": 729,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-08",
+      "kind": "reconstructed",
+      "value": 209.36,
+      "calculated_at": "2026-01-08T00:00:00.000Z",
+      "valid_rows": 730,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-09",
+      "kind": "reconstructed",
+      "value": 216.56,
+      "calculated_at": "2026-01-09T00:00:00.000Z",
+      "valid_rows": 729,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-10",
+      "kind": "reconstructed",
+      "value": 215.84,
+      "calculated_at": "2026-01-10T00:00:00.000Z",
+      "valid_rows": 731,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-11",
+      "kind": "reconstructed",
+      "value": 216.08,
+      "calculated_at": "2026-01-11T00:00:00.000Z",
+      "valid_rows": 730,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-12",
+      "kind": "reconstructed",
+      "value": 217.99,
+      "calculated_at": "2026-01-12T00:00:00.000Z",
+      "valid_rows": 729,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-13",
+      "kind": "reconstructed",
+      "value": 218.33,
+      "calculated_at": "2026-01-13T00:00:00.000Z",
+      "valid_rows": 728,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-14",
+      "kind": "reconstructed",
+      "value": 224.34,
+      "calculated_at": "2026-01-14T00:00:00.000Z",
+      "valid_rows": 733,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-15",
+      "kind": "reconstructed",
+      "value": 227.26,
+      "calculated_at": "2026-01-15T00:00:00.000Z",
+      "valid_rows": 733,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-16",
+      "kind": "reconstructed",
+      "value": 224.36,
+      "calculated_at": "2026-01-16T00:00:00.000Z",
+      "valid_rows": 734,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-17",
+      "kind": "reconstructed",
+      "value": 224.05,
+      "calculated_at": "2026-01-17T00:00:00.000Z",
+      "valid_rows": 734,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-18",
+      "kind": "reconstructed",
+      "value": 224.26,
+      "calculated_at": "2026-01-18T00:00:00.000Z",
+      "valid_rows": 732,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-19",
+      "kind": "reconstructed",
+      "value": 221.97,
+      "calculated_at": "2026-01-19T00:00:00.000Z",
+      "valid_rows": 733,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-20",
+      "kind": "reconstructed",
+      "value": 219.02,
+      "calculated_at": "2026-01-20T00:00:00.000Z",
+      "valid_rows": 731,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-21",
+      "kind": "reconstructed",
+      "value": 213.47,
+      "calculated_at": "2026-01-21T00:00:00.000Z",
+      "valid_rows": 722,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-22",
+      "kind": "reconstructed",
+      "value": 214.6,
+      "calculated_at": "2026-01-22T00:00:00.000Z",
+      "valid_rows": 728,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-23",
+      "kind": "reconstructed",
+      "value": 214.25,
+      "calculated_at": "2026-01-23T00:00:00.000Z",
+      "valid_rows": 733,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-24",
+      "kind": "reconstructed",
+      "value": 216.96,
+      "calculated_at": "2026-01-24T00:00:00.000Z",
+      "valid_rows": 730,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-25",
+      "kind": "reconstructed",
+      "value": 216.08,
+      "calculated_at": "2026-01-25T00:00:00.000Z",
+      "valid_rows": 733,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-26",
+      "kind": "reconstructed",
+      "value": 211.75,
+      "calculated_at": "2026-01-26T00:00:00.000Z",
+      "valid_rows": 729,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-27",
+      "kind": "reconstructed",
+      "value": 213.35,
+      "calculated_at": "2026-01-27T00:00:00.000Z",
+      "valid_rows": 733,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-28",
+      "kind": "reconstructed",
+      "value": 216.51,
+      "calculated_at": "2026-01-28T00:00:00.000Z",
+      "valid_rows": 732,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-29",
+      "kind": "reconstructed",
+      "value": 217.26,
+      "calculated_at": "2026-01-29T00:00:00.000Z",
+      "valid_rows": 734,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-30",
+      "kind": "reconstructed",
+      "value": 208.72,
+      "calculated_at": "2026-01-30T00:00:00.000Z",
+      "valid_rows": 735,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-01-31",
+      "kind": "reconstructed",
+      "value": 204.75,
+      "calculated_at": "2026-01-31T00:00:00.000Z",
+      "valid_rows": 732,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-01",
+      "kind": "reconstructed",
+      "value": 196.08,
+      "calculated_at": "2026-02-01T00:00:00.000Z",
+      "valid_rows": 726,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-02",
+      "kind": "reconstructed",
+      "value": 192.63,
+      "calculated_at": "2026-02-02T00:00:00.000Z",
+      "valid_rows": 729,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-03",
+      "kind": "reconstructed",
+      "value": 196,
+      "calculated_at": "2026-02-03T00:00:00.000Z",
+      "valid_rows": 729,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-04",
+      "kind": "reconstructed",
+      "value": 191.15,
+      "calculated_at": "2026-02-04T00:00:00.000Z",
+      "valid_rows": 732,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-05",
+      "kind": "reconstructed",
+      "value": 187.53,
+      "calculated_at": "2026-02-05T00:00:00.000Z",
+      "valid_rows": 730,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-06",
+      "kind": "reconstructed",
+      "value": 170.07,
+      "calculated_at": "2026-02-06T00:00:00.000Z",
+      "valid_rows": 725,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-07",
+      "kind": "reconstructed",
+      "value": 182.89,
+      "calculated_at": "2026-02-07T00:00:00.000Z",
+      "valid_rows": 728,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-08",
+      "kind": "reconstructed",
+      "value": 180.97,
+      "calculated_at": "2026-02-08T00:00:00.000Z",
+      "valid_rows": 730,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-09",
+      "kind": "reconstructed",
+      "value": 182.5,
+      "calculated_at": "2026-02-09T00:00:00.000Z",
+      "valid_rows": 732,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-10",
+      "kind": "reconstructed",
+      "value": 182.34,
+      "calculated_at": "2026-02-10T00:00:00.000Z",
+      "valid_rows": 731,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-11",
+      "kind": "reconstructed",
+      "value": 179.84,
+      "calculated_at": "2026-02-11T00:00:00.000Z",
+      "valid_rows": 730,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-12",
+      "kind": "reconstructed",
+      "value": 176.25,
+      "calculated_at": "2026-02-12T00:00:00.000Z",
+      "valid_rows": 732,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-13",
+      "kind": "reconstructed",
+      "value": 173.98,
+      "calculated_at": "2026-02-13T00:00:00.000Z",
+      "valid_rows": 732,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-14",
+      "kind": "reconstructed",
+      "value": 179.54,
+      "calculated_at": "2026-02-14T00:00:00.000Z",
+      "valid_rows": 733,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-15",
+      "kind": "reconstructed",
+      "value": 180.96,
+      "calculated_at": "2026-02-15T00:00:00.000Z",
+      "valid_rows": 735,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-16",
+      "kind": "reconstructed",
+      "value": 179.87,
+      "calculated_at": "2026-02-16T00:00:00.000Z",
+      "valid_rows": 733,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-17",
+      "kind": "reconstructed",
+      "value": 179.43,
+      "calculated_at": "2026-02-17T00:00:00.000Z",
+      "valid_rows": 736,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-18",
+      "kind": "reconstructed",
+      "value": 177.36,
+      "calculated_at": "2026-02-18T00:00:00.000Z",
+      "valid_rows": 734,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-19",
+      "kind": "reconstructed",
+      "value": 177.11,
+      "calculated_at": "2026-02-19T00:00:00.000Z",
+      "valid_rows": 731,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-20",
+      "kind": "reconstructed",
+      "value": 177.89,
+      "calculated_at": "2026-02-20T00:00:00.000Z",
+      "valid_rows": 731,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-21",
+      "kind": "reconstructed",
+      "value": 174.55,
+      "calculated_at": "2026-02-21T00:00:00.000Z",
+      "valid_rows": 736,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-22",
+      "kind": "reconstructed",
+      "value": 174.63,
+      "calculated_at": "2026-02-22T00:00:00.000Z",
+      "valid_rows": 735,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-23",
+      "kind": "reconstructed",
+      "value": 173.85,
+      "calculated_at": "2026-02-23T00:00:00.000Z",
+      "valid_rows": 734,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-24",
+      "kind": "reconstructed",
+      "value": 173.92,
+      "calculated_at": "2026-02-24T00:00:00.000Z",
+      "valid_rows": 732,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-25",
+      "kind": "reconstructed",
+      "value": 172.85,
+      "calculated_at": "2026-02-25T00:00:00.000Z",
+      "valid_rows": 733,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-26",
+      "kind": "reconstructed",
+      "value": 269.25,
+      "calculated_at": "2026-02-26T00:00:00.000Z",
+      "valid_rows": 739,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-27",
+      "kind": "reconstructed",
+      "value": 268.97,
+      "calculated_at": "2026-02-27T00:00:00.000Z",
+      "valid_rows": 737,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-02-28",
+      "kind": "reconstructed",
+      "value": 263.64,
+      "calculated_at": "2026-02-28T00:00:00.000Z",
+      "valid_rows": 737,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-01",
+      "kind": "reconstructed",
+      "value": 267.42,
+      "calculated_at": "2026-03-01T00:00:00.000Z",
+      "valid_rows": 736,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-02",
+      "kind": "reconstructed",
+      "value": 263.85,
+      "calculated_at": "2026-03-02T00:00:00.000Z",
+      "valid_rows": 737,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-03",
+      "kind": "reconstructed",
+      "value": 272.32,
+      "calculated_at": "2026-03-03T00:00:00.000Z",
+      "valid_rows": 738,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-04",
+      "kind": "reconstructed",
+      "value": 268.48,
+      "calculated_at": "2026-03-04T00:00:00.000Z",
+      "valid_rows": 741,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-05",
+      "kind": "reconstructed",
+      "value": 280.43,
+      "calculated_at": "2026-03-05T00:00:00.000Z",
+      "valid_rows": 742,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-06",
+      "kind": "reconstructed",
+      "value": 270.2,
+      "calculated_at": "2026-03-06T00:00:00.000Z",
+      "valid_rows": 743,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-07",
+      "kind": "reconstructed",
+      "value": 263.21,
+      "calculated_at": "2026-03-07T00:00:00.000Z",
+      "valid_rows": 741,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-08",
+      "kind": "reconstructed",
+      "value": 261.23,
+      "calculated_at": "2026-03-08T00:00:00.000Z",
+      "valid_rows": 739,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-09",
+      "kind": "reconstructed",
+      "value": 256.68,
+      "calculated_at": "2026-03-09T00:00:00.000Z",
+      "valid_rows": 740,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-10",
+      "kind": "reconstructed",
+      "value": 264.23,
+      "calculated_at": "2026-03-10T00:00:00.000Z",
+      "valid_rows": 739,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-11",
+      "kind": "reconstructed",
+      "value": 272.2,
+      "calculated_at": "2026-03-11T00:00:00.000Z",
+      "valid_rows": 743,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-12",
+      "kind": "reconstructed",
+      "value": 272.89,
+      "calculated_at": "2026-03-12T00:00:00.000Z",
+      "valid_rows": 743,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-13",
+      "kind": "reconstructed",
+      "value": 273.27,
+      "calculated_at": "2026-03-13T00:00:00.000Z",
+      "valid_rows": 743,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-14",
+      "kind": "reconstructed",
+      "value": 269.71,
+      "calculated_at": "2026-03-14T00:00:00.000Z",
+      "valid_rows": 742,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-15",
+      "kind": "reconstructed",
+      "value": 270.12,
+      "calculated_at": "2026-03-15T00:00:00.000Z",
+      "valid_rows": 742,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-16",
+      "kind": "reconstructed",
+      "value": 272.73,
+      "calculated_at": "2026-03-16T00:00:00.000Z",
+      "valid_rows": 745,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-17",
+      "kind": "reconstructed",
+      "value": 277.53,
+      "calculated_at": "2026-03-17T00:00:00.000Z",
+      "valid_rows": 751,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-18",
+      "kind": "reconstructed",
+      "value": 269.16,
+      "calculated_at": "2026-03-18T00:00:00.000Z",
+      "valid_rows": 751,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-19",
+      "kind": "reconstructed",
+      "value": 272.51,
+      "calculated_at": "2026-03-19T00:00:00.000Z",
+      "valid_rows": 750,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-20",
+      "kind": "reconstructed",
+      "value": 268.25,
+      "calculated_at": "2026-03-20T00:00:00.000Z",
+      "valid_rows": 751,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-21",
+      "kind": "reconstructed",
+      "value": 262.69,
+      "calculated_at": "2026-03-21T00:00:00.000Z",
+      "valid_rows": 749,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-22",
+      "kind": "reconstructed",
+      "value": 263.42,
+      "calculated_at": "2026-03-22T00:00:00.000Z",
+      "valid_rows": 749,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-23",
+      "kind": "reconstructed",
+      "value": 258.37,
+      "calculated_at": "2026-03-23T00:00:00.000Z",
+      "valid_rows": 753,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-24",
+      "kind": "reconstructed",
+      "value": 266.61,
+      "calculated_at": "2026-03-24T00:00:00.000Z",
+      "valid_rows": 754,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-25",
+      "kind": "reconstructed",
+      "value": 266.19,
+      "calculated_at": "2026-03-25T00:00:00.000Z",
+      "valid_rows": 754,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-26",
+      "kind": "reconstructed",
+      "value": 267.46,
+      "calculated_at": "2026-03-26T00:00:00.000Z",
+      "valid_rows": 756,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-27",
+      "kind": "reconstructed",
+      "value": 259.54,
+      "calculated_at": "2026-03-27T00:00:00.000Z",
+      "valid_rows": 755,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-28",
+      "kind": "reconstructed",
+      "value": 253.52,
+      "calculated_at": "2026-03-28T00:00:00.000Z",
+      "valid_rows": 753,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-29",
+      "kind": "reconstructed",
+      "value": 254.73,
+      "calculated_at": "2026-03-29T00:00:00.000Z",
+      "valid_rows": 749,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-30",
+      "kind": "reconstructed",
+      "value": 252.86,
+      "calculated_at": "2026-03-30T00:00:00.000Z",
+      "valid_rows": 750,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-03-31",
+      "kind": "reconstructed",
+      "value": 254.69,
+      "calculated_at": "2026-03-31T00:00:00.000Z",
+      "valid_rows": 752,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-01",
+      "kind": "reconstructed",
+      "value": 254.45,
+      "calculated_at": "2026-04-01T00:00:00.000Z",
+      "valid_rows": 755,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-02",
+      "kind": "reconstructed",
+      "value": 253.81,
+      "calculated_at": "2026-04-02T00:00:00.000Z",
+      "valid_rows": 757,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-03",
+      "kind": "reconstructed",
+      "value": 251.42,
+      "calculated_at": "2026-04-03T00:00:00.000Z",
+      "valid_rows": 751,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-04",
+      "kind": "reconstructed",
+      "value": 251.5,
+      "calculated_at": "2026-04-04T00:00:00.000Z",
+      "valid_rows": 750,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-05",
+      "kind": "reconstructed",
+      "value": 247.15,
+      "calculated_at": "2026-04-05T00:00:00.000Z",
+      "valid_rows": 748,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-06",
+      "kind": "reconstructed",
+      "value": 251.66,
+      "calculated_at": "2026-04-06T00:00:00.000Z",
+      "valid_rows": 748,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-07",
+      "kind": "reconstructed",
+      "value": 258.16,
+      "calculated_at": "2026-04-07T00:00:00.000Z",
+      "valid_rows": 749,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-08",
+      "kind": "reconstructed",
+      "value": 271.14,
+      "calculated_at": "2026-04-08T00:00:00.000Z",
+      "valid_rows": 755,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-09",
+      "kind": "reconstructed",
+      "value": 268.53,
+      "calculated_at": "2026-04-09T00:00:00.000Z",
+      "valid_rows": 754,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-10",
+      "kind": "reconstructed",
+      "value": 270.3,
+      "calculated_at": "2026-04-10T00:00:00.000Z",
+      "valid_rows": 757,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-11",
+      "kind": "reconstructed",
+      "value": 269.73,
+      "calculated_at": "2026-04-11T00:00:00.000Z",
+      "valid_rows": 754,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-12",
+      "kind": "reconstructed",
+      "value": 271.96,
+      "calculated_at": "2026-04-12T00:00:00.000Z",
+      "valid_rows": 752,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-13",
+      "kind": "reconstructed",
+      "value": 263.12,
+      "calculated_at": "2026-04-13T00:00:00.000Z",
+      "valid_rows": 758,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-14",
+      "kind": "reconstructed",
+      "value": 276.99,
+      "calculated_at": "2026-04-14T00:00:00.000Z",
+      "valid_rows": 760,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-15",
+      "kind": "reconstructed",
+      "value": 274.37,
+      "calculated_at": "2026-04-15T00:00:00.000Z",
+      "valid_rows": 763,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-16",
+      "kind": "reconstructed",
+      "value": 273.52,
+      "calculated_at": "2026-04-16T00:00:00.000Z",
+      "valid_rows": 762,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-17",
+      "kind": "reconstructed",
+      "value": 274.24,
+      "calculated_at": "2026-04-17T00:00:00.000Z",
+      "valid_rows": 763,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-18",
+      "kind": "reconstructed",
+      "value": 284.29,
+      "calculated_at": "2026-04-18T00:00:00.000Z",
+      "valid_rows": 758,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-19",
+      "kind": "reconstructed",
+      "value": 284.9,
+      "calculated_at": "2026-04-19T00:00:00.000Z",
+      "valid_rows": 756,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-20",
+      "kind": "reconstructed",
+      "value": 284.23,
+      "calculated_at": "2026-04-20T00:00:00.000Z",
+      "valid_rows": 757,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-21",
+      "kind": "reconstructed",
+      "value": 280.51,
+      "calculated_at": "2026-04-21T00:00:00.000Z",
+      "valid_rows": 763,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-22",
+      "kind": "reconstructed",
+      "value": 280.35,
+      "calculated_at": "2026-04-22T00:00:00.000Z",
+      "valid_rows": 764,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-23",
+      "kind": "reconstructed",
+      "value": 277.04,
+      "calculated_at": "2026-04-23T00:00:00.000Z",
+      "valid_rows": 767,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-24",
+      "kind": "reconstructed",
+      "value": 381.74,
+      "calculated_at": "2026-04-24T00:00:00.000Z",
+      "valid_rows": 765,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-25",
+      "kind": "reconstructed",
+      "value": 383.1,
+      "calculated_at": "2026-04-25T00:00:00.000Z",
+      "valid_rows": 768,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-26",
+      "kind": "reconstructed",
+      "value": 379.3,
+      "calculated_at": "2026-04-26T00:00:00.000Z",
+      "valid_rows": 766,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-27",
+      "kind": "reconstructed",
+      "value": 384.73,
+      "calculated_at": "2026-04-27T00:00:00.000Z",
+      "valid_rows": 764,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-28",
+      "kind": "reconstructed",
+      "value": 378.9,
+      "calculated_at": "2026-04-28T00:00:00.000Z",
+      "valid_rows": 765,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-29",
+      "kind": "reconstructed",
+      "value": 374.13,
+      "calculated_at": "2026-04-29T00:00:00.000Z",
+      "valid_rows": 765,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-04-30",
+      "kind": "reconstructed",
+      "value": 370.64,
+      "calculated_at": "2026-04-30T00:00:00.000Z",
+      "valid_rows": 767,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-01",
+      "kind": "reconstructed",
+      "value": 375.66,
+      "calculated_at": "2026-05-01T00:00:00.000Z",
+      "valid_rows": 770,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-02",
+      "kind": "reconstructed",
+      "value": 382.61,
+      "calculated_at": "2026-05-02T00:00:00.000Z",
+      "valid_rows": 771,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-03",
+      "kind": "reconstructed",
+      "value": 377.74,
+      "calculated_at": "2026-05-03T00:00:00.000Z",
+      "valid_rows": 773,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-04",
+      "kind": "reconstructed",
+      "value": 379.06,
+      "calculated_at": "2026-05-04T00:00:00.000Z",
+      "valid_rows": 773,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-05",
+      "kind": "reconstructed",
+      "value": 383.4,
+      "calculated_at": "2026-05-05T00:00:00.000Z",
+      "valid_rows": 774,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-06",
+      "kind": "reconstructed",
+      "value": 386.61,
+      "calculated_at": "2026-05-06T00:00:00.000Z",
+      "valid_rows": 778,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-07",
+      "kind": "reconstructed",
+      "value": 389.56,
+      "calculated_at": "2026-05-07T00:00:00.000Z",
+      "valid_rows": 778,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-08",
+      "kind": "reconstructed",
+      "value": 382.97,
+      "calculated_at": "2026-05-08T00:00:00.000Z",
+      "valid_rows": 781,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-09",
+      "kind": "reconstructed",
+      "value": 383.37,
+      "calculated_at": "2026-05-09T00:00:00.000Z",
+      "valid_rows": 783,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-10",
+      "kind": "reconstructed",
+      "value": 386.81,
+      "calculated_at": "2026-05-10T00:00:00.000Z",
+      "valid_rows": 781,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-11",
+      "kind": "reconstructed",
+      "value": 386.87,
+      "calculated_at": "2026-05-11T00:00:00.000Z",
+      "valid_rows": 793,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-12",
+      "kind": "reconstructed",
+      "value": 384.76,
+      "calculated_at": "2026-05-12T00:00:00.000Z",
+      "valid_rows": 794,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-13",
+      "kind": "reconstructed",
+      "value": 380.57,
+      "calculated_at": "2026-05-13T00:00:00.000Z",
+      "valid_rows": 790,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-14",
+      "kind": "reconstructed",
+      "value": 378.45,
+      "calculated_at": "2026-05-14T00:00:00.000Z",
+      "valid_rows": 791,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-15",
+      "kind": "reconstructed",
+      "value": 384.37,
+      "calculated_at": "2026-05-15T00:00:00.000Z",
+      "valid_rows": 793,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-16",
+      "kind": "reconstructed",
+      "value": 376.07,
+      "calculated_at": "2026-05-16T00:00:00.000Z",
+      "valid_rows": 792,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-17",
+      "kind": "reconstructed",
+      "value": 372.13,
+      "calculated_at": "2026-05-17T00:00:00.000Z",
+      "valid_rows": 792,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-18",
+      "kind": "reconstructed",
+      "value": 366.4,
+      "calculated_at": "2026-05-18T00:00:00.000Z",
+      "valid_rows": 792,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-19",
+      "kind": "reconstructed",
+      "value": 369.48,
+      "calculated_at": "2026-05-19T00:00:00.000Z",
+      "valid_rows": 792,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-20",
+      "kind": "reconstructed",
+      "value": 368.7,
+      "calculated_at": "2026-05-20T00:00:00.000Z",
+      "valid_rows": 792,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-21",
+      "kind": "reconstructed",
+      "value": 368.91,
+      "calculated_at": "2026-05-21T00:00:00.000Z",
+      "valid_rows": 793,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-22",
+      "kind": "reconstructed",
+      "value": 369.04,
+      "calculated_at": "2026-05-22T00:00:00.000Z",
+      "valid_rows": 795,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-23",
+      "kind": "reconstructed",
+      "value": 355.27,
+      "calculated_at": "2026-05-23T00:00:00.000Z",
+      "valid_rows": 794,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-24",
+      "kind": "reconstructed",
+      "value": 360.8,
+      "calculated_at": "2026-05-24T00:00:00.000Z",
+      "valid_rows": 793,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-25",
+      "kind": "reconstructed",
+      "value": 368.08,
+      "calculated_at": "2026-05-25T00:00:00.000Z",
+      "valid_rows": 791,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-26",
+      "kind": "reconstructed",
+      "value": 365.2,
+      "calculated_at": "2026-05-26T00:00:00.000Z",
+      "valid_rows": 795,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-27",
+      "kind": "reconstructed",
+      "value": 358.41,
+      "calculated_at": "2026-05-27T00:00:00.000Z",
+      "valid_rows": 800,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-28",
+      "kind": "reconstructed",
+      "value": 351.82,
+      "calculated_at": "2026-05-28T00:00:00.000Z",
+      "valid_rows": 799,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-29",
+      "kind": "reconstructed",
+      "value": 349.21,
+      "calculated_at": "2026-05-29T00:00:00.000Z",
+      "valid_rows": 797,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-30",
+      "kind": "reconstructed",
+      "value": 348,
+      "calculated_at": "2026-05-30T00:00:00.000Z",
+      "valid_rows": 797,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-05-31",
+      "kind": "reconstructed",
+      "value": 349.85,
+      "calculated_at": "2026-05-31T00:00:00.000Z",
+      "valid_rows": 796,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-01",
+      "kind": "reconstructed",
+      "value": 343.97,
+      "calculated_at": "2026-06-01T00:00:00.000Z",
+      "valid_rows": 796,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-02",
+      "kind": "reconstructed",
+      "value": 335.96,
+      "calculated_at": "2026-06-02T00:00:00.000Z",
+      "valid_rows": 795,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-03",
+      "kind": "reconstructed",
+      "value": 322.68,
+      "calculated_at": "2026-06-03T00:00:00.000Z",
+      "valid_rows": 797,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-04",
+      "kind": "reconstructed",
+      "value": 317.23,
+      "calculated_at": "2026-06-04T00:00:00.000Z",
+      "valid_rows": 796,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-05",
+      "kind": "reconstructed",
+      "value": 317.26,
+      "calculated_at": "2026-06-05T00:00:00.000Z",
+      "valid_rows": 789,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-06",
+      "kind": "reconstructed",
+      "value": 303.38,
+      "calculated_at": "2026-06-06T00:00:00.000Z",
+      "valid_rows": 780,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-07",
+      "kind": "reconstructed",
+      "value": 305.13,
+      "calculated_at": "2026-06-07T00:00:00.000Z",
+      "valid_rows": 782,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-08",
+      "kind": "reconstructed",
+      "value": 318.06,
+      "calculated_at": "2026-06-08T00:00:00.000Z",
+      "valid_rows": 784,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-09",
+      "kind": "reconstructed",
+      "value": 317.7,
+      "calculated_at": "2026-06-09T00:00:00.000Z",
+      "valid_rows": 784,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-10",
+      "kind": "reconstructed",
+      "value": 312.16,
+      "calculated_at": "2026-06-10T00:00:00.000Z",
+      "valid_rows": 785,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-11",
+      "kind": "reconstructed",
+      "value": 304.07,
+      "calculated_at": "2026-06-11T00:00:00.000Z",
+      "valid_rows": 791,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-12",
+      "kind": "reconstructed",
+      "value": 314.47,
+      "calculated_at": "2026-06-12T00:00:00.000Z",
+      "valid_rows": 789,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-13",
+      "kind": "reconstructed",
+      "value": 314.39,
+      "calculated_at": "2026-06-13T00:00:00.000Z",
+      "valid_rows": 788,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-14",
+      "kind": "reconstructed",
+      "value": 315.77,
+      "calculated_at": "2026-06-14T00:00:00.000Z",
+      "valid_rows": 785,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-15",
+      "kind": "reconstructed",
+      "value": 319.76,
+      "calculated_at": "2026-06-15T00:00:00.000Z",
+      "valid_rows": 792,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-16",
+      "kind": "reconstructed",
+      "value": 324.9,
+      "calculated_at": "2026-06-16T00:00:00.000Z",
+      "valid_rows": 794,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-17",
+      "kind": "reconstructed",
+      "value": 322.47,
+      "calculated_at": "2026-06-17T00:00:00.000Z",
+      "valid_rows": 793,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-18",
+      "kind": "reconstructed",
+      "value": 319.62,
+      "calculated_at": "2026-06-18T00:00:00.000Z",
+      "valid_rows": 791,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-19",
+      "kind": "reconstructed",
+      "value": 313.54,
+      "calculated_at": "2026-06-19T00:00:00.000Z",
+      "valid_rows": 790,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-20",
+      "kind": "reconstructed",
+      "value": 313.28,
+      "calculated_at": "2026-06-20T00:00:00.000Z",
+      "valid_rows": 790,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-21",
+      "kind": "reconstructed",
+      "value": 317.29,
+      "calculated_at": "2026-06-21T00:00:00.000Z",
+      "valid_rows": 790,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-22",
+      "kind": "reconstructed",
+      "value": 311.94,
+      "calculated_at": "2026-06-22T00:00:00.000Z",
+      "valid_rows": 792,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-23",
+      "kind": "reconstructed",
+      "value": 317.05,
+      "calculated_at": "2026-06-23T00:00:00.000Z",
+      "valid_rows": 798,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-24",
+      "kind": "reconstructed",
+      "value": 310.53,
+      "calculated_at": "2026-06-24T00:00:00.000Z",
+      "valid_rows": 799,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-25",
+      "kind": "reconstructed",
+      "value": 301.78,
+      "calculated_at": "2026-06-25T00:00:00.000Z",
+      "valid_rows": 800,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-26",
+      "kind": "reconstructed",
+      "value": 300.17,
+      "calculated_at": "2026-06-26T00:00:00.000Z",
+      "valid_rows": 794,
+      "total_rows": 1000,
+      "source": "CoinGecko historical market charts",
+      "calculation_method": "simple_average"
+    },
+    {
+      "date": "2026-06-27",
+      "kind": "observed",
+      "value": 299.89,
+      "calculated_at": "2026-06-27T19:54:30.965Z",
+      "valid_rows": 809,
+      "total_rows": 1000,
+      "source": "CoinGecko API",
+      "calculation_method": "simple_average"
+    }
+  ]
+}
