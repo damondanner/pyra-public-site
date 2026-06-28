@@ -21,7 +21,7 @@ for (const [label, html] of pages) {
     '6a246aeaab28df7fd2fc178e',
     'Coming Soon',
     'USA-only distributed-ledger barter credit system',
-    'closed barter network',
+    'A member-only barter network built on blockchain infrastructure.',
     '0x6ddd86...63ed3e',
     '100B PYRA',
     'PYRA Barter Credit',
