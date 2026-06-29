@@ -19,7 +19,9 @@ for (const [label, html] of pages) {
     'assets/pyra-logo.jpg',
     'base:app_id',
     '6a246aeaab28df7fd2fc178e',
-    'Coming Soon',
+    'Wallet Live',
+    'https://wallet.pyraprotocol.com/',
+    'Open PYRA Wallet',
     'USA-only distributed-ledger barter credit system',
     'A member-only barter network built on blockchain infrastructure.',
     '0x6ddd86...63ed3e',
@@ -111,7 +113,7 @@ for (const [label, html] of pages) {
     'accessibility.html',
     'security.html',
     'mailto:damondanner@gmail.com',
-    'No public member actions are live on this page.'
+    'No wallet transactions occur on this informational page.'
   ]) {
     assert(html.includes(expected), `Expected ${label} landing page to include: ${expected}`);
   }

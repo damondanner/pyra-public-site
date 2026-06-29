@@ -158,7 +158,7 @@
         line-height: 1.55;
       }
 
-      .coming {
+      .wallet-link {
         display: inline-block;
         margin-top: 30px;
         border: 1px solid var(--gold);
@@ -166,7 +166,14 @@
         color: var(--bright-gold);
         padding: 14px 18px;
         font-weight: 900;
+        text-decoration: none;
         text-transform: uppercase;
+      }
+
+      .wallet-link:focus,
+      .wallet-link:hover {
+        background: var(--gold);
+        color: var(--black);
       }
 
       .credit-panel {
@@ -598,7 +605,7 @@
           <img src="assets/pyra-logo.jpg" alt="PYRA logo">
           <span>PYRA Protocol</span>
         </div>
-        <div class="status">Coming Soon</div>
+        <div class="status">Wallet Live</div>
       </div>
     </header>
 
@@ -608,6 +615,7 @@
           <div class="eyebrow">Pyramidion Cryptocurrency LLC</div>
           <h1>A member-only barter network built on blockchain infrastructure.</h1>
             <p class="lead">PYRA is a USA-only distributed-ledger barter credit system for approved members, designed for trade activity, account approval, activity records, and multichain transparency.</p>
+          <a class="wallet-link" href="https://wallet.pyraprotocol.com/">Open PYRA Wallet</a>
           <div class="credit-panel" aria-live="polite">
             <div>
               <div class="credit-kicker">PYRA Barter Credit</div>
@@ -619,7 +627,6 @@
           <div class="risk-notice">
             <strong>Important notice:</strong> Pyramidion Cryptocurrency LLC is not a bank, is not an FDIC-insured institution, and PYRA is not FDIC insured. PYRA is not a deposit account, legal tender, investment product, securities offering, or cash redemption product. Member access is USA-only and subject to KYC, sanctions screening, wallet registration, and manual approval.
           </div>
-          <div class="coming">Website and member app coming soon</div>
         </div>
         <div class="seal" aria-label="PYRA logo display">
           <img src="assets/pyra-logo.jpg" alt="Pyramidion Cryptocurrency logo">
@@ -827,7 +834,7 @@
 
     <footer>
       <div class="wrap footer-content">
-        <span>PYRA Protocol modernization is in progress. No public member actions are live on this page.</span>
+        <span>PYRA Protocol modernization is in progress. No wallet transactions occur on this informational page.</span>
         <nav class="legal-links" aria-label="Legal and privacy links">
           <a href="mailto:damondanner@gmail.com">Contact</a>
           <a href="terms.html">Terms of Use</a>
