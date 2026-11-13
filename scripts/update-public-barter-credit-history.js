@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const repoRoot = path.resolve(__dirname, '..');
-const RETENTION_DAYS = 1827;
+const { mergeSnapshot } = require('../cloudflare/public-credit.cjs');
 const defaultSnapshot = path.join(repoRoot, 'api/barter-credit.json');
 const defaultOutputs = [
   path.join(repoRoot, 'api/barter-credit-history.json'),
@@ -37,49 +37,6 @@ async function main() {
     last_date: history.points[history.points.length - 1].date,
     outputs: outputs.map(output => path.relative(repoRoot, output).replace(/\\/g, '/'))
   }, null, 2));
-}
-
-function mergeSnapshot(existingHistory, snapshot) {
-  assertValidSnapshot(snapshot);
-
-  const point = {
-    date: snapshot.calculated_at.slice(0, 10),
-    kind: 'observed',
-    value: Number(snapshot.value),
-    calculated_at: snapshot.calculated_at,
-    valid_rows: Number(snapshot.valid_rows || 0),
-    total_rows: Number(snapshot.total_rows || 0),
-    source: snapshot.source,
-    calculation_method: snapshot.calculation_method
-  };
-  const pointsByDate = new Map();
-
-  if (isValidHistory(existingHistory)) {
-    for (const existingPoint of existingHistory.points) {
-      if (isValidPoint(existingPoint)) pointsByDate.set(existingPoint.date, existingPoint);
-    }
-  }
-
-  pointsByDate.set(point.date, point);
-  const points = [...pointsByDate.values()]
-    .sort((left, right) => left.date.localeCompare(right.date))
-    .slice(-RETENTION_DAYS);
-
-  return {
-    type: 'pyra_public_barter_credit_history',
-    version: 1,
-    frequency: 'daily',
-    retention_days: RETENTION_DAYS,
-    started_at: points[0].calculated_at,
-    updated_at: point.calculated_at,
-    source_latest: '/api/barter-credit.json',
-    historical_reconstruction: points.some(historyPoint => historyPoint.kind === 'reconstructed'),
-    caveat: points.some(historyPoint => historyPoint.kind === 'reconstructed')
-      ? 'Reconstructed points apply the PYRA formula to available CoinGecko historical data; observed points are recorded live PYRA snapshots.'
-      : 'Verified PYRA snapshots only. Values before the archive start are not reconstructed.',
-    reconstruction: existingHistory && existingHistory.reconstruction || null,
-    points
-  };
 }
 
 async function fetchHistory(url) {
@@ -176,7 +133,7 @@ function runSelfTest() {
     upsertedHistory.points.length !== 2 ||
     upsertedHistory.points[1].value !== 130 ||
     upsertedHistory.historical_reconstruction !== false ||
-    upsertedHistory.retention_days !== RETENTION_DAYS
+    upsertedHistory.retention_days !== 1827
   ) {
     throw new Error('Public barter-credit history did not preserve its daily archive contract');
   }

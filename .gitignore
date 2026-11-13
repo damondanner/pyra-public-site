@@ -3,3 +3,5 @@
 node_modules/
 .playwright-cli/
 *.tmp
+.wrangler/
+.cloudflare-build/
