@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { fetchCoinGeckoMarkets, getCoinGeckoConfig } = require('../apps/api/src/coingecko');
-const { calculateBarterCredit } = require('../packages/pricing/src');
+const { createPublicSnapshot } = require('../cloudflare/public-credit.cjs');
 const { loadLocalEnv } = require('./lib/load-local-env');
 
 const repoRoot = path.resolve(__dirname, '..');
@@ -51,23 +51,6 @@ async function main() {
     calculated_at: snapshot.calculated_at,
     outputs: outputs.map(output => path.relative(repoRoot, output).replace(/\\/g, '/'))
   }, null, 2));
-}
-
-function createPublicSnapshot(rows, config = {}) {
-  const source = config.tier === 'pro' ? 'CoinGecko Pro API' : 'CoinGecko API';
-  const snapshot = calculateBarterCredit(rows, { source });
-
-  return {
-    ...snapshot,
-    type: 'pyra_public_barter_credit_snapshot',
-    version: 1,
-    market_pages_requested: config.maxPages || null,
-    market_page_size: config.perPage || null,
-    privacy: {
-      api_key_excluded: true,
-      raw_market_rows_excluded: true
-    }
-  };
 }
 
 function writeJsonAtomically(output, value) {

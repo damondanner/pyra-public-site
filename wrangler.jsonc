@@ -1,0 +1,17 @@
+{
+  "name": "pyra-public-site-preview",
+  "main": "cloudflare/worker.mjs",
+  "compatibility_date": "2026-11-13",
+  "assets": {
+    "directory": "./apps/web/public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/barter-credit.json", "/api/barter-credit-history.json", "/assets/barter-credit.json"]
+  },
+  "vars": { "REFRESH_ENABLED": "false" },
+  "d1_databases": [{
+    "binding": "PUBLIC_DATA",
+    "database_name": "pyra-public-data-preview",
+    "database_id": "00000000-0000-0000-0000-000000000000",
+    "migrations_dir": "cloudflare/migrations"
+  }]
+}
