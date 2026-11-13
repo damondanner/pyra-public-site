@@ -4,7 +4,7 @@ This branch prepares hosting; the production domain still uses the existing GitH
 
 The Worker serves `apps/web/public` and routes the two public barter-credit documents and snapshot alias through a separate public-data D1 database. A scheduled refresh uses the existing pricing formula and daily-history merge shared with the current publisher. Snapshot and history are stored in one atomic document; an optimistic revision guard prevents a concurrent writer from losing history. Failed refreshes retain the previous document. Public requests cannot run refreshes or write data. No membership records belong in this database.
 
-The checked-in configuration is preview-only, uses a placeholder database ID, disables provider refreshes and has no cron or production routes. It must be configured before deployment.
+The checked-in configuration is preview-only, binds the dedicated `pyra-public-data-preview` database, disables provider refreshes and has no cron or production routes. Production must use a separate database and configuration.
 
 1. Create a dedicated preview D1 database, set its ID and apply `cloudflare/migrations`. Validate asset delivery and public reads on a temporary hostname with synthetic inputs. The preview must never bind production databases or credentials.
 2. Create a separate production public-data database. Seed from the latest published history, not an older checkout; update the static snapshot and history artifact before first production refresh. Keep the existing publisher running until this is verified.

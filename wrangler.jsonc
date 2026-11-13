@@ -11,7 +11,7 @@
   "d1_databases": [{
     "binding": "PUBLIC_DATA",
     "database_name": "pyra-public-data-preview",
-    "database_id": "00000000-0000-0000-0000-000000000000",
+    "database_id": "80d2558f-c9bc-4f6e-b85b-0c4d9ba5d6f6",
     "migrations_dir": "cloudflare/migrations"
   }]
 }
