@@ -60,7 +60,6 @@ for (const [label, html] of pages) {
     '1 btc equal to 1 USD for accounting math',
     'Consent-gated AI identification and automated marketplace providers are prepared but not active',
     'Multichain Footprint',
-    'Member Governance',
     'Time Bank',
     'custom professional rate',
     'Offline Mode',
@@ -70,35 +69,6 @@ for (const [label, html] of pages) {
     'Recovery packet and settlement plan exports',
     'No transfer',
     'without KYC documents, seed phrases, private keys, signatures, or broadcasts',
-    'Public Vote Tally',
-    'pyra_public_vote_tally',
-    'assets/public-vote-tally.json',
-    'normalizePublicTallyPayload',
-    'isSafePublicTally',
-    'PUBLIC_TALLY_FORBIDDEN_KEYS',
-    'hasForbiddenPublicTallyKeys',
-    'accepted_votes',
-    'registered_wallets',
-    'member_roster_sha256',
-    'memberRosterSha256',
-    'member_roster_byte_length',
-    'memberRosterByteLength',
-    'walletAddress',
-    'wallet_addresses',
-    'walletAddresses',
-    'renderPublicTally',
-    'refreshPublicTally',
-    'Public results load from assets/public-vote-tally.json',
-    'Privacy Boundary',
-    'KYC data, member roster records, raw transfers, and voter wallet lists are excluded',
-    'eligibility',
-    'approved_member_roster_required',
-    'isValidPublicTallyRegisteredWalletCount',
-    'member_roster_snapshot_id',
-    'registered_wallet_count',
-    'registered wallets at tally time',
-    'No public tally snapshot has been published yet.',
-    'last indexed block',
     'Pyramidion Cryptocurrency LLC is not a bank',
     'not an FDIC-insured institution',
     'PYRA is not FDIC insured',
@@ -117,6 +87,10 @@ for (const [label, html] of pages) {
     'No wallet transactions occur on this informational page.'
   ]) {
     assert(html.includes(expected), `Expected ${label} landing page to include: ${expected}`);
+  }
+
+  for (const removed of ['Public Vote Tally', 'Member Governance', 'publicTally', 'public-vote-tally.json']) {
+    assert(!html.includes(removed), `${label} must keep voting in the separate voting service: ${removed}`);
   }
 
   assert(!/<button[\s>]/i.test(html), `${label} landing page should not include live buttons yet.`);
@@ -225,7 +199,6 @@ for (const [label, html] of legalPages.filter(([label]) => label.includes('secur
 
 assert(fs.existsSync(path.join(repoRoot, 'assets/pyra-logo.jpg')), 'Expected root GitHub Pages logo asset to exist.');
 assert(fs.existsSync(path.join(repoRoot, 'assets/barter-credit.json')), 'Expected root barter-credit snapshot to exist.');
-assert(fs.existsSync(path.join(repoRoot, 'assets/public-vote-tally.json')), 'Expected root vote publication status to exist.');
 assert(fs.existsSync(path.join(repoRoot, 'assets/barter-credit-chart.js')), 'Expected root barter-credit chart script to exist.');
 assert(fs.existsSync(path.join(repoRoot, 'api/index.json')), 'Expected root public API discovery document to exist.');
 assert(fs.existsSync(path.join(repoRoot, 'api/barter-credit.json')), 'Expected root canonical barter-credit snapshot to exist.');

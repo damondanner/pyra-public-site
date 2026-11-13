@@ -492,50 +492,6 @@
         color: var(--muted);
       }
 
-      .tally {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-      }
-
-      .tally-panel {
-        border: 1px solid var(--line);
-        background: rgba(17, 16, 13, 0.86);
-        padding: 20px;
-      }
-
-      .tally-counts {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-        margin-top: 16px;
-      }
-
-      .tally-stat {
-        border-top: 1px solid var(--line);
-        padding-top: 12px;
-      }
-
-      .tally-stat strong {
-        display: block;
-        color: #fff7df;
-        font-size: 30px;
-      }
-
-      .tally-stat span {
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 900;
-        text-transform: uppercase;
-      }
-
-      .tally-source {
-        margin-top: 14px;
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.45;
-      }
-
       footer {
         border-top: 1px solid var(--line);
         padding: 22px 0 30px;
@@ -578,8 +534,6 @@
         .hero,
         .grid,
         .feature-list,
-        .tally,
-        .tally-counts,
         .history-stats {
           grid-template-columns: 1fr;
         }
@@ -755,22 +709,16 @@
                 <p>Ethereum, BNB Chain, Algorand B2B, and Base today, with a guarded adapter path toward additional established chains.</p>
               </div>
             </div>
-            <div class="feature">
-              <div class="glyph">6</div>
-              <div>
-                <h3>Member Governance</h3>
-                <p>Proposal vote wallets and QR flows for approved members, with one eligible registered wallet counted once per proposal.</p>
-              </div>
             </div>
             <div class="feature">
-              <div class="glyph">7</div>
+              <div class="glyph">6</div>
               <div>
                 <h3>Time Bank</h3>
                 <p>Start and stop service sessions, apply a reviewed local living-wage baseline or custom professional rate, and prepare a suggested PYRA amount.</p>
               </div>
             </div>
             <div class="feature">
-              <div class="glyph">8</div>
+              <div class="glyph">7</div>
               <div>
                 <h3>Offline Mode</h3>
                 <p>Create two-party IOU receipts and matching QR copies during an outage, then prepare reconciliation and settlement evidence when connectivity returns.</p>
@@ -803,39 +751,6 @@
           </div>
         </section>
 
-        <section>
-          <div class="section-head">
-            <h2>Public Vote Tally</h2>
-            <p class="note">Proposal results will publish public-safe snapshots after member approval gates and chain indexing are live.</p>
-          </div>
-          <div class="tally">
-            <div class="tally-panel">
-              <div class="label">Snapshot Format</div>
-              <div class="value">pyra_public_vote_tally</div>
-              <p>Public results load from assets/public-vote-tally.json when a privacy-checked snapshot is published.</p>
-            </div>
-            <div class="tally-panel">
-              <div class="label">Privacy Boundary</div>
-              <div class="value">Roster excluded</div>
-              <p>KYC data, member roster records, raw transfers, and voter wallet lists are excluded from public tally output.</p>
-            </div>
-          </div>
-          <div class="tally-counts" aria-label="Public tally preview">
-            <div class="tally-stat">
-              <strong id="publicTallyYes">0</strong>
-              <span>yes votes</span>
-            </div>
-            <div class="tally-stat">
-              <strong id="publicTallyNo">0</strong>
-              <span>no votes</span>
-            </div>
-            <div class="tally-stat">
-              <strong id="publicTallyBlock">pending</strong>
-              <span>last indexed block</span>
-            </div>
-          </div>
-          <p class="tally-source" id="publicTallySource">No public tally snapshot has been published yet.</p>
-        </section>
       </div>
     </main>
 
@@ -857,36 +772,8 @@
         const CACHE_KEY = 'pyra-barter-credit-v2';
         const CACHE_MS = 5 * 60 * 1000;
         const BARTER_CREDIT_PATH = 'api/barter-credit.json';
-        const PUBLIC_TALLY_PATH = 'assets/public-vote-tally.json';
         const valueEl = document.getElementById('barterCreditValue');
         const metaEl = document.getElementById('barterCreditMeta');
-        const tallyYesEl = document.getElementById('publicTallyYes');
-        const tallyNoEl = document.getElementById('publicTallyNo');
-        const tallyBlockEl = document.getElementById('publicTallyBlock');
-        const tallySourceEl = document.getElementById('publicTallySource');
-        const PUBLIC_TALLY_FORBIDDEN_KEYS = [
-          'accepted_votes',
-          'acceptedVotes',
-          'rejected_votes',
-          'rejectedVotes',
-          'decoded_transfers',
-          'decodedTransfers',
-          'raw_transfers',
-          'rawTransfers',
-          'registered_wallets',
-          'registeredWallets',
-          'member_roster',
-          'memberRoster',
-          'member_roster_sha256',
-          'memberRosterSha256',
-          'member_roster_byte_length',
-          'memberRosterByteLength',
-          'wallet_address',
-          'walletAddress',
-          'wallet_addresses',
-          'walletAddresses'
-        ];
-
         function formatBtc(value) {
           return new Intl.NumberFormat('en-US', {
             minimumFractionDigits: 2,
@@ -957,70 +844,7 @@
           render(payload, payload.source);
         }
 
-        function normalizePublicTallyPayload(payload) {
-          if (payload && payload.type === 'pyra_public_vote_tally') return payload;
-          if (payload && payload.public_snapshot) return payload.public_snapshot;
-          if (payload && payload.snapshot) return payload.snapshot;
-          if (payload && Array.isArray(payload.records) && payload.records.length > 0) return payload.records[0];
-          return null;
-        }
-
-        function isSafePublicTally(snapshot) {
-          const eligibility = snapshot && snapshot.eligibility || {};
-          const privacy = snapshot && snapshot.privacy || {};
-          return Boolean(
-            snapshot &&
-            snapshot.type === 'pyra_public_vote_tally' &&
-            snapshot.counts &&
-            eligibility.approved_member_roster_required === true &&
-            isValidPublicTallyRegisteredWalletCount(eligibility.registered_wallet_count) &&
-            privacy.kyc_data_excluded === true &&
-            privacy.member_roster_excluded === true &&
-            privacy.voter_wallets_excluded === true &&
-            privacy.raw_transfers_excluded === true &&
-            !hasForbiddenPublicTallyKeys(snapshot)
-          );
-        }
-
-        function isValidPublicTallyRegisteredWalletCount(value) {
-          return value === undefined || value === null || (Number.isFinite(Number(value)) && Number(value) >= 0);
-        }
-
-        function hasForbiddenPublicTallyKeys(snapshot) {
-          const text = JSON.stringify(snapshot || {});
-          return PUBLIC_TALLY_FORBIDDEN_KEYS.some(key => text.includes(`"${key}"`));
-        }
-
-        function renderPublicTally(snapshot) {
-          const eligibility = snapshot.eligibility || {};
-          const rosterReference = eligibility.member_roster_snapshot_id
-            ? ` Roster snapshot ${eligibility.member_roster_snapshot_id}; ${eligibility.registered_wallet_count || 0} registered wallets at tally time.`
-            : '';
-
-          tallyYesEl.textContent = String(snapshot.counts.yes || 0);
-          tallyNoEl.textContent = String(snapshot.counts.no || 0);
-          tallyBlockEl.textContent = snapshot.source && snapshot.source.last_indexed_block
-            ? String(snapshot.source.last_indexed_block)
-            : 'pending';
-          tallySourceEl.textContent = `${snapshot.proposal.title || snapshot.proposal.id} on ${snapshot.proposal.chain_id}; ${snapshot.counts.accepted || 0} accepted, ${snapshot.counts.rejected || 0} rejected. Updated ${formatTime(snapshot.generated_at)}.${rosterReference}`;
-        }
-
-        async function refreshPublicTally() {
-          const response = await fetch(PUBLIC_TALLY_PATH, {
-            headers: { accept: 'application/json' },
-            cache: 'no-store'
-          });
-
-          if (!response.ok) return;
-
-          const snapshot = normalizePublicTallyPayload(await response.json());
-          if (isSafePublicTally(snapshot)) {
-            renderPublicTally(snapshot);
-          }
-        }
-
         const cachedCredit = readCache();
-        refreshPublicTally().catch(() => {});
         if (!cachedCredit) {
           refreshCredit().catch(() => {
             valueEl.textContent = 'btc unavailable';
