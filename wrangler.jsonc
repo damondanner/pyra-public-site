@@ -8,7 +8,7 @@
     "binding": "ASSETS",
     "run_worker_first": ["/api/barter-credit.json", "/api/barter-credit-history.json", "/assets/barter-credit.json"]
   },
-  "vars": { "REFRESH_ENABLED": "false" },
+  "vars": { "REFRESH_ENABLED": "false", "COINGECKO_API_TIER": "public" },
   "d1_databases": [{
     "binding": "PUBLIC_DATA",
     "database_name": "pyra-public-data-preview",

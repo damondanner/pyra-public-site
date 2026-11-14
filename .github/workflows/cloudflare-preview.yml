@@ -1,0 +1,53 @@
+name: Deploy isolated Cloudflare website preview
+
+on:
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: Enable the isolated preview's five-minute provider refresh
+        type: boolean
+        default: false
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pyra-cloudflare-preview
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Check public website and reference-data behavior
+        run: |
+          npm test
+          node --test cloudflare/worker.test.mjs
+      - name: Install pinned deployment tool
+        run: npm install --no-save --package-lock=false --ignore-scripts wrangler@4.92.0
+      - name: Preserve the latest published snapshot and history
+        run: node cloudflare/seed-public-assets.mjs
+      - name: Prepare isolated deployment configuration
+        env:
+          ENABLE_REFRESH: ${{ inputs.refresh }}
+        run: |
+          if [ "$ENABLE_REFRESH" = "true" ]; then
+            node cloudflare/prepare-preview.mjs --refresh
+          else
+            node cloudflare/prepare-preview.mjs
+          fi
+      - name: Apply isolated public-data schema
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_PREVIEW_DEPLOY_TOKEN }}
+        run: npx --no-install wrangler d1 migrations apply PUBLIC_DATA --remote --config .cloudflare-build/preview.json
+      - name: Deploy preview without changing company domains
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_PREVIEW_DEPLOY_TOKEN }}
+        run: npx --no-install wrangler deploy --config .cloudflare-build/preview.json
