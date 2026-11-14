@@ -12,7 +12,7 @@ function publicJson(value, method) {
 
 export async function refreshPublicData(env, loadMarkets = coinGecko.fetchCoinGeckoMarkets) {
   if (env.REFRESH_ENABLED !== 'true') return { status: 'disabled' };
-  if (!env.PUBLIC_DATA || !env.COINGECKO_API_KEY) throw new Error('Public data storage and provider credential are required.');
+  if (!env.PUBLIC_DATA || (!env.COINGECKO_API_KEY && env.COINGECKO_API_TIER !== 'public')) throw new Error('Public data storage and explicit provider configuration are required.');
   const config = { ...coinGecko.getCoinGeckoConfig(env), maxPages: 4, perPage: 250 };
   const snapshot = credit.createPublicSnapshot(await loadMarkets(config), config);
   if (snapshot.status !== 'success') throw new Error('Provider did not return a valid public snapshot.');

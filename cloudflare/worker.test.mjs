@@ -58,6 +58,18 @@ test('public visitors cannot trigger refresh or write public data', async () => 
   assert.equal(await head.text(), '');
 });
 
+test('explicit public provider configuration preserves the existing credential-free feed', async () => {
+  const { env } = setup();
+  const result = await refreshPublicData({ ...env, COINGECKO_API_KEY: '', COINGECKO_API_TIER: 'public' }, async config => {
+    assert.equal(config.tier, 'public');
+    assert.equal(config.apiKey, '');
+    assert.equal(config.maxPages, 4);
+    assert.equal(config.perPage, 250);
+    return rows();
+  });
+  assert.equal(result.status, 'updated');
+});
+
 test('unseeded or malformed history prevents losing the existing archive', async () => {
   const { env, sqlite } = setup();
   await assert.rejects(refreshPublicData({ ...env, ASSETS: { fetch: async () => new Response(null, { status: 404 }) } }, rows));
