@@ -41,6 +41,20 @@ test('failed provider refresh keeps the previous complete snapshot and history',
   assert.equal(sqlite.prepare('SELECT document FROM public_data').get().document, before);
 });
 
+test('scheduled failure identifies only the provider status without leaking response bodies', async () => {
+  const { env } = setup();
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async () => new Response('private-provider-response-must-not-be-logged', { status: 429 });
+  try {
+    await assert.rejects(worker.scheduled({}, env), error => {
+      assert.match(error.message, /provider HTTP 429/);
+      assert(!error.message.includes('private-provider-response'));
+      assert(!error.message.includes(env.COINGECKO_API_KEY));
+      return true;
+    });
+  } finally { globalThis.fetch = originalFetch; }
+});
+
 test('preview refresh is disabled and missing credentials never make upstream requests', async () => {
   const { env } = setup();
   let called = false;
