@@ -1,0 +1,46 @@
+name: Deploy PYRA website to Cloudflare
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - apps/web/public/**
+      - cloudflare/**
+      - apps/api/src/coingecko.js
+      - wrangler.production.jsonc
+      - .github/workflows/cloudflare-production.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pyra-cloudflare-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Verify public website and reference-data behavior
+        run: |
+          npm test
+          node --test cloudflare/worker.test.mjs
+      - name: Install pinned deployment tool
+        run: npm install --no-save --package-lock=false --ignore-scripts wrangler@4.92.0
+      - name: Preserve the latest published snapshot and complete history
+        run: node cloudflare/seed-public-assets.mjs
+      - name: Apply production public-data schema
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_PREVIEW_DEPLOY_TOKEN }}
+        run: npx --no-install wrangler d1 migrations apply PUBLIC_DATA --remote --config wrangler.production.jsonc
+      - name: Deploy website and scheduled public-data refresh
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_PREVIEW_DEPLOY_TOKEN }}
+        run: npx --no-install wrangler deploy --config wrangler.production.jsonc
