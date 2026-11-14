@@ -1,0 +1,19 @@
+{
+  "name": "pyra-public-site",
+  "account_id": "e6017deac0612b67d81a48d9c65f444b",
+  "main": "cloudflare/worker.mjs",
+  "compatibility_date": "2026-11-13",
+  "assets": {
+    "directory": "./apps/web/public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/barter-credit.json", "/api/barter-credit-history.json", "/assets/barter-credit.json"]
+  },
+  "vars": { "REFRESH_ENABLED": "true", "COINGECKO_API_TIER": "public" },
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "d1_databases": [{
+    "binding": "PUBLIC_DATA",
+    "database_name": "pyra-public-data",
+    "database_id": "dcb3319d-8d33-4c92-b986-8b6f8803b5ff",
+    "migrations_dir": "cloudflare/migrations"
+  }]
+}
