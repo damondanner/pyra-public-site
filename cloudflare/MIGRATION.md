@@ -25,3 +25,8 @@ The workflow needs repository secret `CLOUDFLARE_PREVIEW_DEPLOY_TOKEN`, limited 
 Production uses Worker `pyra-public-site` and a separate public-data D1 database `dcb3319d-8d33-4c92-b986-8b6f8803b5ff`. The production workflow deploys only on main changes or manual dispatch; pricing refreshes run within Cloudflare, not as repeated full builds. It uses the approved account-limited temporary deployment secret; that credential expires November 20 and must be replaced for later source deployments. Cron execution does not depend on that deployment credential after publishing.
 
 Before attaching domains, verify a real scheduled refresh through the published JSON timestamps. Disable the preview cron after production refresh succeeds. Retire the former Pages publisher and make source private after the domain points to Cloudflare. Neither database contains membership or KYC data.
+## Main-domain rollback record
+
+Before cutover, `pyraprotocol.com` had four DNS-only A records, TTL 600: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. `www` was a DNS-only CNAME to `damondanner.github.io`, TTL 3600. These values were read directly from the account's DNS table. Preserve unrelated mail, wallet, vote and pilot records.
+
+To roll back after source becomes private, first restore an eligible GitHub Pages publisher and verify its content, then detach only the corresponding Worker custom domains and restore these exact DNS records. Restoring DNS alone cannot resurrect a publisher that GitHub Free has unpublished.
