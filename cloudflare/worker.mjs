@@ -3,6 +3,10 @@ import coinGecko from '../apps/api/src/coingecko.js';
 
 const SNAPSHOT_PATHS = new Set(['/api/barter-credit.json', '/assets/barter-credit.json']);
 const HISTORY_PATH = '/api/barter-credit-history.json';
+class PublicRefreshFailure extends Error {}
+function failed(code) {
+  return new PublicRefreshFailure(`Public reference refresh failed (${code}); previous snapshot retained.`);
+}
 
 function publicJson(value, method) {
   return new Response(method === 'HEAD' ? null : JSON.stringify(value), {
@@ -14,7 +18,13 @@ export async function refreshPublicData(env, loadMarkets = coinGecko.fetchCoinGe
   if (env.REFRESH_ENABLED !== 'true') return { status: 'disabled' };
   if (!env.PUBLIC_DATA || (!env.COINGECKO_API_KEY && env.COINGECKO_API_TIER !== 'public')) throw new Error('Public data storage and explicit provider configuration are required.');
   const config = { ...coinGecko.getCoinGeckoConfig(env), maxPages: 4, perPage: 250 };
-  const snapshot = credit.createPublicSnapshot(await loadMarkets(config), config);
+  let markets;
+  try { markets = await loadMarkets(config); }
+  catch (error) {
+    const status = /^CoinGecko ([45]\d\d):/.exec(String(error?.message || ''))?.[1];
+    throw failed(status ? `provider HTTP ${status}` : 'provider request');
+  }
+  const snapshot = credit.createPublicSnapshot(markets, config);
   if (snapshot.status !== 'success') throw new Error('Provider did not return a valid public snapshot.');
 
   // Read after fetching so overlapping invocations merge against the latest state.
@@ -59,6 +69,9 @@ export default {
   async scheduled(_event, env) {
     // Report a failed invocation to Cloudflare without logging credentials or upstream bodies.
     try { await refreshPublicData(env); }
-    catch { throw new Error('Public reference refresh failed; previous snapshot retained.'); }
+    catch (error) {
+      if (error instanceof PublicRefreshFailure) throw error;
+      throw failed('storage or snapshot validation');
+    }
   },
 };
